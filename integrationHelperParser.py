@@ -9,7 +9,8 @@ changelog_adapter = re.compile("([a-zA-Z])\")
 changelog_adapter_version = re.compile("([\d.])")
 #network_name = pattern.sub('\1',(open()'test.txt')
 
-Scraping the networks in the integration logs
+#Scraping the networks in the integration logs
+#TODO: create function for both behaviors
 for i, line in enumerate(open('test.txt')):
     for match in re.finditer(network,line):
         #adapter_missing = match.group(1)
@@ -26,6 +27,8 @@ for i, line in enumerate(open('test.txt')):
             print (ironSourceSDK)
         else:
             print (network_adapter)
+                               
+#Adapter Compatibility Scarping
 # for i, line in enumerate(open('test_changelog.txt')):
 #     for match in re.finditer(changelog_adapter,line):
 #         #adapter_missing = match.group(1)
