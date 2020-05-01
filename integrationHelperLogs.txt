@@ -1,0 +1,91 @@
+2020-04-06 12:50:36.414 31168-31244/? I/IntegrationHelper: Verifying Integration:
+2020-04-06 12:50:36.414 31168-31244/? I/IntegrationHelper: *** Permissions ***
+2020-04-06 12:50:36.415 31168-31244/? I/IntegrationHelper: android.permission.INTERNET - VERIFIED
+2020-04-06 12:50:36.416 31168-31244/? I/IntegrationHelper: android.permission.ACCESS_NETWORK_STATE - VERIFIED
+2020-04-06 12:50:36.416 31168-31244/? I/IntegrationHelper: --------------- AdColony --------------
+2020-04-06 12:50:36.417 31168-31244/? I/IntegrationHelper: Adapter 4.1.10 - VERIFIED
+2020-04-06 12:50:36.417 31168-31244/? I/IntegrationHelper: Adapter - VERIFIED
+2020-04-06 12:50:36.417 31168-31244/? I/IntegrationHelper: *** Activities ***
+2020-04-06 12:50:36.424 31168-31244/? I/IntegrationHelper: com.adcolony.sdk.AdColonyInterstitialActivity - VERIFIED
+2020-04-06 12:50:36.424 31168-31244/? I/IntegrationHelper: >>>> AdColony - VERIFIED
+2020-04-06 12:50:36.424 31168-31244/? I/IntegrationHelper: --------------- AdMob --------------
+2020-04-06 12:50:36.425 31168-31244/? I/IntegrationHelper: Adapter 4.3.6 - VERIFIED
+2020-04-06 12:50:36.425 31168-31244/? I/IntegrationHelper: Adapter - VERIFIED
+2020-04-06 12:50:36.425 31168-31244/? I/IntegrationHelper: *** Activities ***
+2020-04-06 12:50:36.428 31168-31244/? I/IntegrationHelper: com.google.android.gms.ads.AdActivity - VERIFIED
+2020-04-06 12:50:36.428 31168-31244/? I/IntegrationHelper: >>>> AdMob - VERIFIED
+2020-04-06 12:50:36.428 31168-31244/? I/IntegrationHelper: --------------- Amazon --------------
+2020-04-06 12:50:36.428 31168-31244/? E/IntegrationHelper: Adapter - MISSING
+2020-04-06 12:50:36.428 31168-31244/? E/IntegrationHelper: >>>> Amazon - NOT VERIFIED
+2020-04-06 12:50:36.428 31168-31244/? I/IntegrationHelper: --------------- AppLovin --------------
+2020-04-06 12:50:36.428 31168-31244/? I/IntegrationHelper: Adapter 4.3.7 - VERIFIED
+2020-04-06 12:50:36.428 31168-31244/? I/IntegrationHelper: Adapter - VERIFIED
+2020-04-06 12:50:36.428 31168-31244/? I/IntegrationHelper: SDK Version - 9.11.1
+2020-04-06 12:50:36.428 31168-31244/? I/IntegrationHelper: *** Activities ***
+2020-04-06 12:50:36.432 31168-31244/? I/IntegrationHelper: com.applovin.adview.AppLovinInterstitialActivity - VERIFIED
+2020-04-06 12:50:36.433 31168-31244/? I/IntegrationHelper: com.applovin.sdk.AppLovinWebViewActivity - VERIFIED
+2020-04-06 12:50:36.433 31168-31244/? I/IntegrationHelper: >>>> AppLovin - VERIFIED
+2020-04-06 12:50:36.433 31168-31244/? I/IntegrationHelper: --------------- Chartboost --------------
+2020-04-06 12:50:36.434 31168-31244/? E/IntegrationHelper: Adapter - MISSING
+2020-04-06 12:50:36.434 31168-31244/? E/IntegrationHelper: >>>> Chartboost - NOT VERIFIED
+2020-04-06 12:50:36.434 31168-31244/? I/IntegrationHelper: --------------- Facebook --------------
+2020-04-06 12:50:36.434 31168-31244/? I/IntegrationHelper: Adapter 4.3.9 - VERIFIED
+2020-04-06 12:50:36.434 31168-31244/? I/IntegrationHelper: Adapter - VERIFIED
+2020-04-06 12:50:36.434 31168-31244/? I/IntegrationHelper: SDK Version - 5.6.1
+2020-04-06 12:50:36.434 31168-31244/? I/IntegrationHelper: *** Activities ***
+2020-04-06 12:50:36.436 31168-31244/? I/IntegrationHelper: com.facebook.ads.AudienceNetworkActivity - VERIFIED
+2020-04-06 12:50:36.436 31168-31244/? I/IntegrationHelper: com.facebook.ads.internal.ipc.RemoteANActivity - VERIFIED
+2020-04-06 12:50:36.436 31168-31244/? I/IntegrationHelper: *** Services ***
+2020-04-06 12:50:36.445 31168-31244/? I/IntegrationHelper: com.facebook.ads.internal.ipc.AdsProcessPriorityService - VERIFIED
+2020-04-06 12:50:36.446 31168-31244/? I/IntegrationHelper: com.facebook.ads.internal.ipc.AdsMessengerService - VERIFIED
+2020-04-06 12:50:36.446 31168-31244/? I/IntegrationHelper: >>>> Facebook - VERIFIED
+2020-04-06 12:50:36.446 31168-31244/? I/IntegrationHelper: --------------- Fyber --------------
+2020-04-06 12:50:36.447 31168-31244/? E/IntegrationHelper: Adapter - MISSING
+2020-04-06 12:50:36.447 31168-31244/? E/IntegrationHelper: >>>> Fyber - NOT VERIFIED
+2020-04-06 12:50:36.447 31168-31244/? I/IntegrationHelper: --------------- HyprMX --------------
+2020-04-06 12:50:36.447 31168-31244/? E/IntegrationHelper: Adapter - MISSING
+2020-04-06 12:50:36.447 31168-31244/? E/IntegrationHelper: >>>> HyprMX - NOT VERIFIED
+2020-04-06 12:50:36.447 31168-31244/? I/IntegrationHelper: --------------- InMobi --------------
+2020-04-06 12:50:36.447 31168-31244/? E/IntegrationHelper: Adapter - MISSING
+2020-04-06 12:50:36.447 31168-31244/? E/IntegrationHelper: >>>> InMobi - NOT VERIFIED
+2020-04-06 12:50:36.447 31168-31244/? I/IntegrationHelper: --------------- IronSource  --------------
+2020-04-06 12:50:36.448 31168-31244/? I/IntegrationHelper: Adapter 6.14.0 - VERIFIED
+2020-04-06 12:50:36.448 31168-31244/? I/IntegrationHelper: SDK Version - 5.76
+2020-04-06 12:50:36.448 31168-31244/? I/IntegrationHelper: *** Activities ***
+2020-04-06 12:50:36.450 31168-31244/? I/IntegrationHelper: com.ironsource.sdk.controller.ControllerActivity - VERIFIED
+2020-04-06 12:50:36.451 31168-31244/? I/IntegrationHelper: com.ironsource.sdk.controller.InterstitialActivity - VERIFIED
+2020-04-06 12:50:36.452 31168-31244/? I/IntegrationHelper: com.ironsource.sdk.controller.OpenUrlActivity - VERIFIED
+2020-04-06 12:50:36.452 31168-31244/? I/IntegrationHelper: >>>> IronSource - VERIFIED
+2020-04-06 12:50:36.452 31168-31244/? I/IntegrationHelper: --------------- Maio --------------
+2020-04-06 12:50:36.453 31168-31244/? E/IntegrationHelper: Adapter - MISSING
+2020-04-06 12:50:36.453 31168-31244/? E/IntegrationHelper: >>>> Maio - NOT VERIFIED
+2020-04-06 12:50:36.453 31168-31244/? I/IntegrationHelper: --------------- Mintegral --------------
+2020-04-06 12:50:36.453 31168-31244/? I/IntegrationHelper: Adapter 4.1.1 - VERIFIED
+2020-04-06 12:50:36.453 31168-31244/? I/IntegrationHelper: Adapter - VERIFIED
+2020-04-06 12:50:36.453 31168-31244/? I/IntegrationHelper: SDK Version - MAL_12.1.51
+2020-04-06 12:50:36.453 31168-31244/? I/IntegrationHelper: *** Activities ***
+2020-04-06 12:50:36.454 31168-31244/? I/IntegrationHelper: com.mintegral.msdk.activity.MTGCommonActivity - VERIFIED
+2020-04-06 12:50:36.456 31168-31244/? I/IntegrationHelper: com.mintegral.msdk.reward.player.MTGRewardVideoActivity - VERIFIED
+2020-04-06 12:50:36.456 31168-31244/? I/IntegrationHelper: >>>> Mintegral - VERIFIED
+2020-04-06 12:50:36.456 31168-31244/? I/IntegrationHelper: --------------- MyTarget --------------
+2020-04-06 12:50:36.457 31168-31244/? E/IntegrationHelper: Adapter - MISSING
+2020-04-06 12:50:36.457 31168-31244/? E/IntegrationHelper: >>>> MyTarget - NOT VERIFIED
+2020-04-06 12:50:36.457 31168-31244/? I/IntegrationHelper: --------------- Tapjoy --------------
+2020-04-06 12:50:36.457 31168-31244/? E/IntegrationHelper: Adapter - MISSING
+2020-04-06 12:50:36.457 31168-31244/? E/IntegrationHelper: >>>> Tapjoy - NOT VERIFIED
+2020-04-06 12:50:36.457 31168-31244/? I/IntegrationHelper: --------------- UnityAds --------------
+2020-04-06 12:50:36.457 31168-31244/? I/IntegrationHelper: Adapter 4.1.7 - VERIFIED
+2020-04-06 12:50:36.457 31168-31244/? I/IntegrationHelper: Adapter - VERIFIED
+2020-04-06 12:50:36.457 31168-31244/? I/IntegrationHelper: SDK Version - 3.4.0
+2020-04-06 12:50:36.457 31168-31244/? I/IntegrationHelper: *** Activities ***
+2020-04-06 12:50:36.459 31168-31244/? I/IntegrationHelper: com.unity3d.services.ads.adunit.AdUnitActivity - VERIFIED
+2020-04-06 12:50:36.459 31168-31244/? I/IntegrationHelper: com.unity3d.services.ads.adunit.AdUnitTransparentActivity - VERIFIED
+2020-04-06 12:50:36.460 31168-31244/? I/IntegrationHelper: com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity - VERIFIED
+2020-04-06 12:50:36.461 31168-31244/? I/IntegrationHelper: com.unity3d.services.ads.adunit.AdUnitSoftwareActivity - VERIFIED
+2020-04-06 12:50:36.461 31168-31244/? I/IntegrationHelper: >>>> UnityAds - VERIFIED
+2020-04-06 12:50:36.461 31168-31244/? I/IntegrationHelper: --------------- Vungle --------------
+2020-04-06 12:50:36.461 31168-31244/? E/IntegrationHelper: Adapter - MISSING
+2020-04-06 12:50:36.461 31168-31244/? E/IntegrationHelper: >>>> Vungle - NOT VERIFIED
+2020-04-06 12:50:36.462 31168-31414/? W/IntegrationHelper: --------------- Google Play Services --------------
+2020-04-06 12:50:36.464 31168-31414/? I/IntegrationHelper: Google Play Services - VERIFIED
+2020-04-06 12:50:36.511 31168-31414/? I/IntegrationHelper: GAID is: 157fd272-b5ae-45d2-aeb0-e41c4bc6e31e (use this for test devices)
