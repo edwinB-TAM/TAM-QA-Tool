@@ -1,0 +1,2414 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js" prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta property="og:image" content="https://developers.ironsrc.com/wp-content/themes/knowledgecenter/img/og-image.jpg"/>
+        <link rel="pingback" href="https://developers.ironsrc.com/xmlrpc.php">
+        <!--[if lt IE 9]>
+    <script src="https://developers.ironsrc.com/wp-content/themes/knowledgecenter/js/html5.js"></script>
+    <![endif]-->
+        <script>
+            (function(html) {
+                html.className = html.className.replace(/\bno-js\b/, 'js')
+            }
+            )(document.documentElement);
+        </script>
+        <title>Mediation Networks for iOS - IronSource Knowledge Center</title>
+        <!-- This site is optimized with the Yoast SEO plugin v3.0.7 - https://yoast.com/wordpress/plugins/seo/ -->
+        <link rel="canonical" href="https://developers.ironsrc.com/ironsource-mobile/ios/mediation-networks-ios/"/>
+        <!-- / Yoast SEO plugin. -->
+        <link rel='dns-prefetch' href='//fonts.googleapis.com'/>
+        <link rel='dns-prefetch' href='//s.w.org'/>
+        <link rel="alternate" type="application/rss+xml" title="IronSource Knowledge Center &raquo; Feed" href="https://developers.ironsrc.com/feed/"/>
+        <link rel="alternate" type="application/rss+xml" title="IronSource Knowledge Center &raquo; Comments Feed" href="https://developers.ironsrc.com/comments/feed/"/>
+        <link rel="alternate" type="application/rss+xml" title="IronSource Knowledge Center &raquo; Mediation Networks for iOS Comments Feed" href="https://developers.ironsrc.com/ironsource-mobile/ios/mediation-networks-ios/feed/"/>
+        <script type="text/javascript">
+            window._wpemojiSettings = {
+                "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/",
+                "ext": ".png",
+                "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/",
+                "svgExt": ".svg",
+                "source": {
+                    "concatemoji": "https:\/\/developers.ironsrc.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"
+                }
+            };
+            !function(a, b, c) {
+                function d(a, b) {
+                    var c = String.fromCharCode;
+                    l.clearRect(0, 0, k.width, k.height),
+                    l.fillText(c.apply(this, a), 0, 0);
+                    var d = k.toDataURL();
+                    l.clearRect(0, 0, k.width, k.height),
+                    l.fillText(c.apply(this, b), 0, 0);
+                    var e = k.toDataURL();
+                    return d === e
+                }
+                function e(a) {
+                    var b;
+                    if (!l || !l.fillText)
+                        return !1;
+                    switch (l.textBaseline = "top",
+                    l.font = "600 32px Arial",
+                    a) {
+                    case "flag":
+                        return !(b = d([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819])) && (b = d([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]),
+                        !b);
+                    case "emoji":
+                        return b = d([55358, 56760, 9792, 65039], [55358, 56760, 8203, 9792, 65039]),
+                        !b
+                    }
+                    return !1
+                }
+                function f(a) {
+                    var c = b.createElement("script");
+                    c.src = a,
+                    c.defer = c.type = "text/javascript",
+                    b.getElementsByTagName("head")[0].appendChild(c)
+                }
+                var g, h, i, j, k = b.createElement("canvas"), l = k.getContext && k.getContext("2d");
+                for (j = Array("flag", "emoji"),
+                c.supports = {
+                    everything: !0,
+                    everythingExceptFlag: !0
+                },
+                i = 0; i < j.length; i++)
+                    c.supports[j[i]] = e(j[i]),
+                    c.supports.everything = c.supports.everything && c.supports[j[i]],
+                    "flag" !== j[i] && (c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && c.supports[j[i]]);
+                c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && !c.supports.flag,
+                c.DOMReady = !1,
+                c.readyCallback = function() {
+                    c.DOMReady = !0
+                }
+                ,
+                c.supports.everything || (h = function() {
+                    c.readyCallback()
+                }
+                ,
+                b.addEventListener ? (b.addEventListener("DOMContentLoaded", h, !1),
+                a.addEventListener("load", h, !1)) : (a.attachEvent("onload", h),
+                b.attachEvent("onreadystatechange", function() {
+                    "complete" === b.readyState && c.readyCallback()
+                })),
+                g = c.source || {},
+                g.concatemoji ? f(g.concatemoji) : g.wpemoji && g.twemoji && (f(g.twemoji),
+                f(g.wpemoji)))
+            }(window, document, window._wpemojiSettings);
+        </script>
+        <style type="text/css">
+            img.wp-smiley, img.emoji {
+                display: inline !important;
+                border: none !important;
+                box-shadow: none !important;
+                height: 1em !important;
+                width: 1em !important;
+                margin: 0 .07em !important;
+                vertical-align: -0.1em !important;
+                background: none !important;
+                padding: 0 !important;
+            }
+        </style>
+        <link rel='stylesheet' id='wp-block-library-css' href='https://developers.ironsrc.com/wp-includes/css/dist/block-library/style.min.css?ver=5.1.1' type='text/css' media='all'/>
+        <link rel='stylesheet' id='contact-form-7-css' href='https://developers.ironsrc.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.3.1' type='text/css' media='all'/>
+        <link rel='stylesheet' id='SearchAutocomplete-theme-css' href='https://developers.ironsrc.com/wp-content/plugins/search-autocomplete/css/aristo/jquery-ui-aristo.min.css?ver=1.9.2' type='text/css' media='all'/>
+        <link rel='stylesheet' id='knowledgecenter-stylesheet-css' href='https://developers.ironsrc.com/wp-content/themes/knowledgecenter/css/main.css?ver=20190320' type='text/css' media='all'/>
+        <link rel='stylesheet' id='googleFonts-css' href='https://fonts.googleapis.com/css?family=Varela+Round&#038;ver=5.1.1' type='text/css' media='all'/>
+        <script type='text/javascript' src='https://developers.ironsrc.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+        <script type='text/javascript' src='https://developers.ironsrc.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+        <script type='text/javascript' src='https://developers.ironsrc.com/wp-content/themes/knowledgecenter/js/vendor/modernizr-2.8.3.min.js?ver=20151216'></script>
+        <link rel='https://api.w.org/' href='https://developers.ironsrc.com/wp-json/'/>
+        <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developers.ironsrc.com/xmlrpc.php?rsd"/>
+        <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://developers.ironsrc.com/wp-includes/wlwmanifest.xml"/>
+        <meta name="generator" content="WordPress 5.1.1"/>
+        <link rel='shortlink' href='https://developers.ironsrc.com/?p=11631'/>
+        <link rel="alternate" type="application/json+oembed" href="https://developers.ironsrc.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdevelopers.ironsrc.com%2Fironsource-mobile%2Fios%2Fmediation-networks-ios%2F"/>
+        <link rel="alternate" type="text/xml+oembed" href="https://developers.ironsrc.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdevelopers.ironsrc.com%2Fironsource-mobile%2Fios%2Fmediation-networks-ios%2F&#038;format=xml"/>
+        <style>
+            article.page table a {
+                word-break: break-all;
+            }
+        </style>
+        <!-- Google Tag Manager -->
+        <script>
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0]
+                  , j = d.createElement(s)
+                  , dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            }
+            )(window, document, 'script', 'dataLayer', 'GTM-KPCWPFP');
+        </script>
+        <!-- End Google Tag Manager -->
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }
+                ,
+                i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            }
+            )(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-33338116-2', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <style type="text/css">
+            .recentcomments a {
+                display: inline !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+        </style>
+        <link rel="icon" href="https://developers.ironsrc.com/wp-content/uploads/2018/09/favicon.png" sizes="32x32"/>
+        <link rel="icon" href="https://developers.ironsrc.com/wp-content/uploads/2018/09/favicon.png" sizes="192x192"/>
+        <link rel="apple-touch-icon-precomposed" href="https://developers.ironsrc.com/wp-content/uploads/2018/09/favicon.png"/>
+        <meta name="msapplication-TileImage" content="https://developers.ironsrc.com/wp-content/uploads/2018/09/favicon.png"/>
+        <script type="text/javascript">
+            var isOSPage = false;
+            var cookieOSId = '';
+
+            isOSPage = true;
+            cookieOSId = '5';
+        </script>
+    </head>
+    <body class="article-template-default single single-article postid-11631 no-home product-ironsource-mobile fixed-panels fixed-panels-head" itemscope itemtype="http://schema.org/Article">
+        <div class="header-holder"></div>
+        <header id="header" class="fixed header">
+            <section id="primary">
+                <a href="https://developers.ironsrc.com" class="logo-link">
+                    <span id="logo">
+                        <img src="https://developers.ironsrc.com/wp-content/themes/knowledgecenter/img/is-logo-round.svg" alt="">
+                    </span>
+                </a>
+                <div class="site-link">
+                    <a href="http://www.ironsrc.com">
+                        ironsrc.com<strong></strong>
+                    </a>
+                </div>
+            </section>
+            <!-- Template: secondary header -->
+            <div id="secondary-nav">
+                <div class="container container-fluid">
+                    <div class="stick-right">
+                        <div class="select select_sdk">
+                            <input type="hidden" value="">
+                            <div class="select__value" data-placeholder="Download SDK"></div>
+                            <ul class="select__drop">
+                                <li class="sdk-menu-item-11930								" id="sdk-item-11930">
+                                    <a href="/ironsource-mobile/ios/ios-sdk/">iOS SDK</a>
+                                </li>
+                                <li class="sdk-menu-item-11931								" id="sdk-item-11931">
+                                    <a href="/ironsource-mobile/android/android-sdk/">Android SDK</a>
+                                </li>
+                                <li class="sdk-menu-item-11933								" id="sdk-item-11933">
+                                    <a href="/ironsource-mobile/unity/unity-plugin/">Unity Plugin</a>
+                                </li>
+                                <li class="sdk-menu-item-11932								" id="sdk-item-11932">
+                                    <a href="/ironsource-mobile-air/plugin-integration/adobe-air-plugin/">Adobe Air Plugin</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="https://developers.ironsrc.com/submit-a-request/" class="btn js-request">Submit a Request				</a>
+                        <div class="top-panel__form">
+                            <form role="search" method="get" class="search-form" action="https://developers.ironsrc.com">
+                                <div class="search-field-container">
+                                    <span class="icon-search_dark"></span>
+                                    <input type="search" class="search-field" placeholder="Search" value="" name="s"/>
+                                    <span class="icon-close"></span>
+                                </div>
+                                <input type="hidden" name="post_type" value="article"/>
+                                <input type="hidden" value="5" name="_qtid"/>
+                                <input type="hidden" value="11631" name="_qoid"/>
+                            </form>
+                            <a href="#" class="btn btn-blue js-search">
+                                <i class="icon-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="show-mobile-menu"></div>
+                        <div class="breadcrumbs">
+                            <div class="segment product">
+                                <div>
+                                    <span class="divider">/</span>
+                                    <label for="">
+                                        <a href="https://developers.ironsrc.com">ironSource Mobile</a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="segment os">
+                                <div>
+                                    <span class="divider">/</span>
+                                    <i class="drop"></i>
+                                    <label for="hidden_13100">
+                                        <i class="ios"></i>
+                                        iOS
+                                    </label>
+                                </div>
+                                <input type="text" id="hidden_13100">
+                                <ul>
+                                    <li>
+                                        <a href="https://developers.ironsrc.com/ironsource-mobile/android/android-sdk/">Android</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://developers.ironsrc.com/ironsource-mobile/unity/unity-plugin/">Unity</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://developers.ironsrc.com/ironsource-mobile/air/adobe-air-plugin/">Adobe Air</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://developers.ironsrc.com/ironsource-mobile/xamarin/get-started-ironsource-xamarin-plugin-android/">Xamarin</a>
+                                    </li>
+                                </ul>
+                                <div class="holder_over"></div>
+                            </div>
+                            <div class="segment page">
+                                <span class="divider">/</span>
+                                <label for="hidden_current">Add Mediation Networks</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="wrap">
+            <div id="content">
+                <div class="container container-fluid">
+                    <div class="row">
+                        <div class="d-column_3">
+                            <aside class="aside-panel">
+                                <div class="aside-panel__inner">
+                                    <nav>
+                                        <h1 class="nav-title">Dev Integration</h1>
+                                        <ul class="aside-nav js-accordion">
+                                            <li class="has-child top-level">
+                                                <a href="#" class=" menu-item menu-item-type-custom menu-item-object-custom clickable">
+                                                    <span class="item-title bold">Get Started</span>
+                                                </a>
+                                                <i class="before"></i>
+                                                <ul class="">
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/ios-sdk/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">iOS SDK Integration</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/ironsource-ios-6-5-integration-swift/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Integrate with Swift</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/advanced-settings-2/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Advanced Settings</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-child top-level">
+                                                <a href="#" class=" menu-item menu-item-type-custom menu-item-object-custom clickable">
+                                                    <span class="item-title bold">Change Log</span>
+                                                </a>
+                                                <i class="before"></i>
+                                                <ul class="">
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/sdk-change-log/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">SDK</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="has-child">
+                                                        <a href="#" class=" menu-item menu-item-type-custom menu-item-object-custom clickable">
+                                                            <span class="item-title">Mediation Adapters</span>
+                                                        </a>
+                                                        <i class="before"></i>
+                                                        <ul class="">
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/adcolony-change-log/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">AdColony</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/admob-change-log/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">AdMob</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/amazon-mobile-ads-network-change-log/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Amazon</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/applovin-change-log/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">AppLovin</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/chartboost-change-log/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Chartboost</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/21769-2/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Facebook</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/fyber-change-log/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Fyber</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/hyprmx-change-log/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">HyprMX</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/inmobi-change-log/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">InMobi</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/maio-change-log/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Maio</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/mintegral-change-log/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Mintegral</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/pangle-change-log/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Pangle</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/tapjoy-change-log/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Tapjoy</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/unityads-change-log/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">UnityAds</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/vungle-change-log/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Vungle</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-child top-level">
+                                                <a href="#" class=" menu-item menu-item-type-custom menu-item-object-custom clickable">
+                                                    <span class="item-title bold">Ad Units</span>
+                                                </a>
+                                                <i class="before"></i>
+                                                <ul class="">
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/rewarded-video-integration-ios/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Rewarded Video</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/interstitial-integration-ios/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Interstitial</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/banner-integration-ios/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Banner</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/offerwall-integration-ios/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Offerwall</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-child has-open open active top-level">
+                                                <a href="#" class=" menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent clickable">
+                                                    <span class="item-title bold">Mediation</span>
+                                                </a>
+                                                <i class="before"></i>
+                                                <ul class="open">
+                                                    <li class=" active">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/mediation-networks-ios/" class=" menu-item menu-item-type-post_type menu-item-object-article current-menu-item current">
+                                                            <span class="item-title">Add Mediation Networks</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="has-child">
+                                                        <a href="#" class=" menu-item menu-item-type-custom menu-item-object-custom clickable">
+                                                            <span class="item-title">Mediation Network Guides</span>
+                                                        </a>
+                                                        <i class="before"></i>
+                                                        <ul class="">
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/adcolony-mediation-guide/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">AdColony</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/admob-mediation-guide/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">AdMob</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/amazon-mobile-ad-network-integration-guide/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Amazon</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/applovin-mediation-guide/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">AppLovin</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/chartboost-mediation-guide/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Chartboost</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/facebook-mediation-guide/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Facebook</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/fyber-mediation-integration-guide/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Fyber</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/hyprmx-mediation-guide/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">HyprMX</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/inmobi-mediation-guide/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">InMobi</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/maio-mediation-integration-guide/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Maio</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/mintegral-integration-guide/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Mintegral</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/pangle-integration-guide/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Pangle</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/tapjoy-mediation-guide/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Tapjoy</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/unityads-mediation-guide/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">UnityAds</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/vungle-mediation-guide/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Vungle</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-child top-level">
+                                                <a href="#" class=" menu-item menu-item-type-custom menu-item-object-custom clickable">
+                                                    <span class="item-title bold">Test Your Integration</span>
+                                                </a>
+                                                <i class="before"></i>
+                                                <ul class="">
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/integration-helper-ios/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">In Your Code: Integration Helper</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/integration-testing/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">On The Platform: Testing Module</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="has-child">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/integration-checklists-ios/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">On Final Review: Checklists</span>
+                                                        </a>
+                                                        <i class="before"></i>
+                                                        <ul class="">
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/ios-sdk-integration-review/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">SDK</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/ios-rewarded-video-integration-review/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Rewarded Video</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/ios-interstitial-integration-review/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Interstitial</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/ios-offerwall-integration-review/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Offerwall</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/frequently-made-mistakes-review/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Common Mistakes</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-child top-level">
+                                                <a href="#" class=" menu-item menu-item-type-custom menu-item-object-custom clickable">
+                                                    <span class="item-title bold">Mediating ironSource</span>
+                                                </a>
+                                                <i class="before"></i>
+                                                <ul class="">
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/integrating-ironsource-network-admob-mediation/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">AdMob</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/integrating-ironsource-network-mopub-mediation/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">MoPub</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/integrating-ironsource-network-fyber-mediation/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Fyber</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h1 class="nav-title">Platform Setup</h1>
+                                        <ul class="aside-nav js-accordion">
+                                            <li class="has-child top-level">
+                                                <a href="#app-monetization" class=" menu-item menu-item-type-custom menu-item-object-custom clickable">
+                                                    <span class="item-title bold">App Monetization</span>
+                                                </a>
+                                                <i class="before"></i>
+                                                <ul class="">
+                                                    <li class="has-child">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/monetization-products-overview/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Ad Units</span>
+                                                        </a>
+                                                        <i class="before"></i>
+                                                        <ul class="">
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/setting-rewarded-video-on-ironsource-dashboard/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Rewarded Video</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/setting-interstitial-supersonic-dashboard/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Interstitials</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/setting-banners-dashboard/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Banners</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/setting-offerwall-supersonic-dashboard/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Offerwall</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-child">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/monetization-configurations/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Ad Settings</span>
+                                                        </a>
+                                                        <i class="before"></i>
+                                                        <ul class="">
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/segments-set-up/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Segments</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/add-iron-source-instances/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">ironSource Instances</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/ad-placements-setting/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Ad Placements</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/integration-testing/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Integration Testing</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/virtual-currency-settings/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Virtual Currency</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/server-to-server-callback-setting/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Server-to-Server Callbacks</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/handling-server-to-server-callback-events/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Server-to-Server Handlers</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/application-user-id/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Application User ID</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-child">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/mediation/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Mediation</span>
+                                                        </a>
+                                                        <i class="before"></i>
+                                                        <ul class="">
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/mediation-ad-networks-setup/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Networks Setup</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/mediation-management/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Management</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/best-practices-instances-waterfall-management/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Best Practices: Instances and Waterfall Management</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/ab-testing/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Monetization A/B Testing</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/best-practices-monetization-ab-testing/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Best Practices: Monetization A/B Testing</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/cross-promotion/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Cross Promotion</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/direct-deals/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Direct Deals</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-child">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/monetization-reports/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Reports</span>
+                                                        </a>
+                                                        <i class="before"></i>
+                                                        <ul class="">
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/performance-reports/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Performance</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/user-activity-reports/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">User Activity</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/general/cohorts-reports/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Cohorts</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/report-generator/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Report Generator</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-child">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/api-2/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">API</span>
+                                                        </a>
+                                                        <i class="before"></i>
+                                                        <ul class="">
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/api-introduction/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Introduction</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/authentication/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Authentication</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/reporting/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Reporting API</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/ad-revenue-measurements/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Ad Revenue Measurements</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/mediationmanagement/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Mediation Management API</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/app/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Application API</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/instance-api/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Instance API</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-child top-level">
+                                                <a href="#app-promoting" class=" menu-item menu-item-type-custom menu-item-object-custom clickable">
+                                                    <span class="item-title bold">App Promotion</span>
+                                                </a>
+                                                <i class="before"></i>
+                                                <ul class="">
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/campaign-setup-2/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Campaign Setup</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/creative-sets/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Creative Sets</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/csv-bid-manager/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">CSV Bid Manager</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="has-child">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/promote-reports/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Promote reports</span>
+                                                        </a>
+                                                        <i class="before"></i>
+                                                        <ul class="">
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/general/overview-reports/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Overview Reports</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/ios/analysis-reports/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Analysis Reports</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-child">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/campaign-reporting/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">APIs</span>
+                                                        </a>
+                                                        <i class="before"></i>
+                                                        <ul class="">
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/general/audience-api/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Audience API</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/general/bidding-api-v2/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Bidding API v2</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/general/reporting-api-v2/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Reporting API v2</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/general/title-api/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Titles API</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/general/assets-api/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Assets API</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="https://developers.ironsrc.com/ironsource-mobile/general/creatives-api/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                                    <span class="item-title">Creatives API</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-child top-level">
+                                                <a href="#account-setting" class=" menu-item menu-item-type-custom menu-item-object-custom clickable">
+                                                    <span class="item-title bold">Account Settings</span>
+                                                </a>
+                                                <i class="before"></i>
+                                                <ul class="">
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/user-management/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">User Management</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/sign-up-ironsource/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Signing Up</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/logging-in/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Logging In</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/adding-app/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Adding Your Apps</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/company-information-management/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Company Information</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/activity-log/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Activity Logs</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-child top-level">
+                                                <a href="#funds-and-payments" class=" menu-item menu-item-type-custom menu-item-object-custom clickable">
+                                                    <span class="item-title bold">Funds &Payments</span>
+                                                </a>
+                                                <i class="before"></i>
+                                                <ul class="">
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/payment-method-setup/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Payment Setup</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/funds-dashboard/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Payment Dashboard</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/payment-terms-and-requirements/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Payment Terms</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-child top-level">
+                                                <a href="#terms-and-conditions" class=" menu-item menu-item-type-custom menu-item-object-custom clickable">
+                                                    <span class="item-title bold">Legal Resources</span>
+                                                </a>
+                                                <i class="before"></i>
+                                                <ul class="">
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/publisher-terms-conditions/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Publisher T &C</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/ironsource-mobile-privacy-policy/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Privacy Policy</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/ios/ironsource-mobile-submitting-deletion-pull-requests-procedure/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Deletion &Pull Requests</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="https://developers.ironsrc.com/ironsource-mobile/general/open-source-tc/" class=" menu-item menu-item-type-post_type menu-item-object-article">
+                                                            <span class="item-title">Open Source T &C</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class=" top-level">
+                                                <a href="https://www.ironsrc.com/case-studies/" class="external menu-item menu-item-type-custom menu-item-object-custom">
+                                                    <span class="item-title bold">Case Studies</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="d-column_7 t-column_9">
+                            <article class="page typography" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Table">
+                                <h1>Mediation Networks for iOS</h1>
+                                <p>
+                                    The ironSource Mediation platform supports interstitial and video ads from leading ad networks, equipped with smart loading, ad placement technology and ad delivery optimization. Our Mediation solution is a new monetization tool that enhances user experience, offers better control on ad performance and significantly increases revenue!<br/>
+                                    <div class="alert alert_list">
+                                        <strong>Before You Start</strong>
+                                        <br/>
+                                        Make sure you have correctly integrated ironSource &#8217;s <a href="https://developers.ironsrc.com/ironsource-mobile/ios/rewarded-video-integration-ios/" target="_blank" rel="noopener noreferrer">Rewarded Video</a>
+                                        or<a href="https://developers.ironsrc.com/ironsource-mobile/ios/interstitial-integration-ios/" target="_blank" rel="noopener noreferrer">Interstitial</a>
+                                        or <a href="https://developers.ironsrc.com/ironsource-mobile/ios/banner-integration-ios/" target="_blank" rel="noopener noreferrer">Banner Mediation</a>
+                                        into your application. 
+                                    </div>
+                                <div class="alert alert_list">
+                                    <strong>i</strong>
+                                    <strong>OS 13 and XCode 11</strong>
+                                    <br/>
+                                    <span>
+                                        You can learn more about adapters readiness for iOS 13 and XCode 11 <a href="https://developers.ironsrc.com/ironsource-mobile/ios-13-ad-network-status/">here</a>
+                                        .
+                                    </span>
+                                </div>
+                                <h2>Integrate the ironSource Mediation Network Adapters</h2>
+                                <div class="alert alert_default">Below you can easily select the ad networks you &#8217;re interested in integrating with ironSource Mediation and copy the Cocoapods Script to your code. If you &#8217;d still like to use Manual Download to integrate our adapters, you can find all the necessary links and information to do so below </div>
+                                <p>
+                                    Simply choose your preferred ad networks, scroll down and copy the customized pod script to your podfile. Make sure to follow the ad network integration guides on the menu to your left to properly set up the ad networks on the ironSource dashboard.<br/>
+                                    <div class="sc_bundle">
+                                        <div class="bundles_row">
+                                            <div class="bundle-col">
+                                                <div class="sc_copy_bundle" data-id="AdColony">
+                                                    <div class="ver">v4.1.4</div>
+                                                    <div class="title">AdColony</div>
+                                                    <ul class="sc_bundle_badges">
+                                                        <li title="rv" class="rv">
+                                                            <i class="icon rv"></i>
+                                                        </li>
+                                                        <li title="interstitial" class="interstitial">
+                                                            <i class="icon interstitial"></i>
+                                                        </li>
+                                                        <li title="banner" class="banner">
+                                                            <i class="icon banner"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="bundle-col">
+                                                <div class="sc_copy_bundle" data-id="AdMob">
+                                                    <div class="ver">v7.57.0</div>
+                                                    <div class="title">AdMob</div>
+                                                    <ul class="sc_bundle_badges">
+                                                        <li title="rv" class="rv">
+                                                            <i class="icon rv"></i>
+                                                        </li>
+                                                        <li title="interstitial" class="interstitial">
+                                                            <i class="icon interstitial"></i>
+                                                        </li>
+                                                        <li title="banner" class="banner">
+                                                            <i class="icon banner"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="bundle-col">
+                                                <div class="sc_copy_bundle" data-id="Amazon">
+                                                    <div class="ver">v3.0.0</div>
+                                                    <div class="title">Amazon</div>
+                                                    <ul class="sc_bundle_badges">
+                                                        <li title="banner" class="banner">
+                                                            <i class="icon banner"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bundles_row">
+                                            <div class="bundle-col">
+                                                <div class="sc_copy_bundle" data-id="AppLovin">
+                                                    <div class="ver">v6.11.6</div>
+                                                    <div class="title">AppLovin</div>
+                                                    <ul class="sc_bundle_badges">
+                                                        <li title="rv" class="rv">
+                                                            <i class="icon rv"></i>
+                                                        </li>
+                                                        <li title="interstitial" class="interstitial">
+                                                            <i class="icon interstitial"></i>
+                                                        </li>
+                                                        <li title="banner" class="banner">
+                                                            <i class="icon banner"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="bundle-col">
+                                                <div class="sc_copy_bundle" data-id="Chartboost">
+                                                    <div class="ver">v8.1.0</div>
+                                                    <div class="title">Chartboost</div>
+                                                    <ul class="sc_bundle_badges">
+                                                        <li title="rv" class="rv">
+                                                            <i class="icon rv"></i>
+                                                        </li>
+                                                        <li title="interstitial" class="interstitial">
+                                                            <i class="icon interstitial"></i>
+                                                        </li>
+                                                        <li title="banner" class="banner">
+                                                            <i class="icon banner"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="bundle-col">
+                                                <div class="sc_copy_bundle" data-id="Facebook">
+                                                    <div class="ver">v5.8.0</div>
+                                                    <div class="title">Facebook</div>
+                                                    <ul class="sc_bundle_badges">
+                                                        <li title="rv" class="rv">
+                                                            <i class="icon rv"></i>
+                                                        </li>
+                                                        <li title="interstitial" class="interstitial">
+                                                            <i class="icon interstitial"></i>
+                                                        </li>
+                                                        <li title="banner" class="banner">
+                                                            <i class="icon banner"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bundles_row">
+                                            <div class="bundle-col">
+                                                <div class="sc_copy_bundle" data-id="Fyber">
+                                                    <div class="ver">v7.5.4</div>
+                                                    <div class="title">Fyber</div>
+                                                    <ul class="sc_bundle_badges">
+                                                        <li title="rv" class="rv">
+                                                            <i class="icon rv"></i>
+                                                        </li>
+                                                        <li title="interstitial" class="interstitial">
+                                                            <i class="icon interstitial"></i>
+                                                        </li>
+                                                        <li title="banner" class="banner">
+                                                            <i class="icon banner"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="bundle-col">
+                                                <div class="sc_copy_bundle" data-id="HyprMX">
+                                                    <div class="ver">v5.2.0</div>
+                                                    <div class="title">HyprMX</div>
+                                                    <ul class="sc_bundle_badges">
+                                                        <li title="rv" class="rv">
+                                                            <i class="icon rv"></i>
+                                                        </li>
+                                                        <li title="interstitial" class="interstitial">
+                                                            <i class="icon interstitial"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="bundle-col">
+                                                <div class="sc_copy_bundle" data-id="InMobi">
+                                                    <div class="ver">v9.0.1</div>
+                                                    <div class="title">InMobi</div>
+                                                    <ul class="sc_bundle_badges">
+                                                        <li title="rv" class="rv">
+                                                            <i class="icon rv"></i>
+                                                        </li>
+                                                        <li title="interstitial" class="interstitial">
+                                                            <i class="icon interstitial"></i>
+                                                        </li>
+                                                        <li title="banner" class="banner">
+                                                            <i class="icon banner"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bundles_row">
+                                            <div class="bundle-col">
+                                                <div class="sc_copy_bundle" data-id="Maio">
+                                                    <div class="ver">v1.5.1</div>
+                                                    <div class="title">Maio</div>
+                                                    <ul class="sc_bundle_badges">
+                                                        <li title="rv" class="rv">
+                                                            <i class="icon rv"></i>
+                                                        </li>
+                                                        <li title="interstitial" class="interstitial">
+                                                            <i class="icon interstitial"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="bundle-col">
+                                                <div class="sc_copy_bundle" data-id="Mintegral">
+                                                    <div class="ver">v6.1.3</div>
+                                                    <div class="title">Mintegral</div>
+                                                    <ul class="sc_bundle_badges">
+                                                        <li title="rv" class="rv">
+                                                            <i class="icon rv"></i>
+                                                        </li>
+                                                        <li title="interstitial" class="interstitial">
+                                                            <i class="icon interstitial"></i>
+                                                        </li>
+                                                        <li title="banner" class="banner">
+                                                            <i class="icon banner"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="bundle-col">
+                                                <div class="sc_copy_bundle" data-id="Pangle">
+                                                    <div class="ver">v2.9.0.1</div>
+                                                    <div class="title">Pangle</div>
+                                                    <ul class="sc_bundle_badges">
+                                                        <li title="rv" class="rv">
+                                                            <i class="icon rv"></i>
+                                                        </li>
+                                                        <li title="interstitial" class="interstitial">
+                                                            <i class="icon interstitial"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bundles_row">
+                                            <div class="bundle-col">
+                                                <div class="sc_copy_bundle" data-id="Tapjoy">
+                                                    <div class="ver">v12.4.2</div>
+                                                    <div class="title">Tapjoy</div>
+                                                    <ul class="sc_bundle_badges">
+                                                        <li title="rv" class="rv">
+                                                            <i class="icon rv"></i>
+                                                        </li>
+                                                        <li title="interstitial" class="interstitial">
+                                                            <i class="icon interstitial"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="bundle-col">
+                                                <div class="sc_copy_bundle" data-id="UnityAds">
+                                                    <div class="ver">v3.4.2</div>
+                                                    <div class="title">UnityAds</div>
+                                                    <ul class="sc_bundle_badges">
+                                                        <li title="rv" class="rv">
+                                                            <i class="icon rv"></i>
+                                                        </li>
+                                                        <li title="interstitial" class="interstitial">
+                                                            <i class="icon interstitial"></i>
+                                                        </li>
+                                                        <li title="banner" class="banner">
+                                                            <i class="icon banner"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="bundle-col">
+                                                <div class="sc_copy_bundle" data-id="Vungle">
+                                                    <div class="ver">v6.5.3</div>
+                                                    <div class="title">Vungle</div>
+                                                    <ul class="sc_bundle_badges">
+                                                        <li title="rv" class="rv">
+                                                            <i class="icon rv"></i>
+                                                        </li>
+                                                        <li title="interstitial" class="interstitial">
+                                                            <i class="icon interstitial"></i>
+                                                        </li>
+                                                        <li title="banner" class="banner">
+                                                            <i class="icon banner"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bundles_row"></div>
+                                        <pre data-code="{{code}}">
+                                            <code class="language-swift"></code>
+                                        </pre>
+                                    </div>
+                                </p>
+                                <h2>Manual Download for Mediation Adapters</h2>
+                                <p>
+                                    <span>
+                                        <div class="alert alert_list">
+                                            <strong>
+                                                Updating the ironSource SDK &amp;Mediation Adapters<br/>
+                                            </strong>
+                                    </span>
+                                    When upgrading from an earlier SDK version to SDK 6.7.0 and above, you must remove all existing frameworks and update the mediation adapters. 
+                        </div>
+                        <h4 id="manual-download-for-mediation-adapters">Manual Download for Mediation Adapters</h4>
+                        <p>
+                            Download the adapters from the table below and follow the ad network integration guides to access premium ad inventory through the ironSource mediation platform:<br/>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Ad Network</td>
+                                        <td>Supported SDK Version</td>
+                                        <td>Rewarded Video</td>
+                                        <td>Interstitial</td>
+                                        <td>Banner</td>
+                                        <td>Integration Guide</td>
+                                        <td>Adapter &SDK</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AdColony</td>
+                                        <td>4.1.4</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td>
+                                            <a href="https://developers.ironsrc.com/ironsource-mobile/ios/adcolony-mediation-guide/" target="_blank" rel="noopener">Guide</a>
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                <a href="https://dl.bintray.com/ironsource-mobile/ios-adapters/ISAdColonyAdapter4.3.0.zip">Download</a>
+                                                <br/>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>AdMob</td>
+                                        <td>7.57.0</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td>
+                                            <a href="https://developers.ironsrc.com/ironsource-mobile/ios/admob-mediation-guide/" target="_blank" rel="noopener">Guide</a>
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                <a href="https://dl.bintray.com/ironsource-mobile/ios-adapters/ISAdMobAdapter4.3.10.zip">Download</a>
+                                                <br/>
+                                                <a href="https://developers.ironsrc.com/wp-content/uploads/2020/03/googlemobileadssdkios.zip">Frameworks</a>
+                                                <br/>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Amazon</td>
+                                        <td>3.0.0</td>
+                                        <td style="text-align: center">–</td>
+                                        <td style="text-align: center">–</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td>
+                                            <a href="https://developers.ironsrc.com/ironsource-mobile/ios/amazon-mobile-ad-network-integration-guide/" target="_blank" rel="noopener">Guide</a>
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                <a href="https://dl.bintray.com/ironsource-mobile/ios-adapters/ISAmazonAdapter4.3.3.zip">Download</a>
+                                                <br/>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>AppLovin</td>
+                                        <td>6.11.6</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td>
+                                            <a href="https://developers.ironsrc.com/ironsource-mobile/ios/applovin-mediation-guide/" target="_blank" rel="noopener">Guide</a>
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                <a href="https://dl.bintray.com/ironsource-mobile/ios-adapters/ISAppLovinAdapter4.3.10.zip">Download</a>
+                                                <br/>
+                                                <a href="https://developers.ironsrc.com/wp-content/uploads/2020/03/applovin-ios-sdk-6.11.6.zip">Frameworks</a>
+                                                <br/>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chartboost</td>
+                                        <td>8.1.0</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td>
+                                            <a href="https://developers.ironsrc.com/ironsource-mobile/ios/chartboost-mediation-guide/" target="_blank" rel="noopener">Guide</a>
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                <a href="https://dl.bintray.com/ironsource-mobile/ios-adapters/ISChartboostAdapter4.3.0.zip">Download</a>
+                                                <br/>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Facebook</td>
+                                        <td>5.8.0</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td>
+                                            <a href="https://developers.ironsrc.com/ironsource-mobile/ios/facebook-mediation-guide/" target="_blank" rel="noopener">Guide</a>
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                <a href="https://dl.bintray.com/ironsource-mobile/ios-adapters/ISFacebookAdapter4.3.14.zip">Download</a>
+                                                <br/>
+                                                <a href="https://developers.ironsrc.com/wp-content/uploads/2020/04/FBAudienceNetwork-5.8.0_ios.zip">Frameworks</a>
+                                                <br/>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fyber</td>
+                                        <td>7.5.4</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td>
+                                            <a href="https://developers.ironsrc.com/ironsource-mobile/ios/fyber-mediation-integration-guide/" target="_blank" rel="noopener">Guide</a>
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                <a href="https://dl.bintray.com/ironsource-mobile/ios-adapters/ISFyberAdapter4.3.4.zip">Download</a>
+                                                <br/>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>HyprMX</td>
+                                        <td>5.2.0</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">–</td>
+                                        <td>
+                                            <a href="https://developers.ironsrc.com/ironsource-mobile/ios/hyprmx-mediation-guide/" target="_blank" rel="noopener">Guide</a>
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                <a href="https://dl.bintray.com/ironsource-mobile/ios-adapters/ISHyprMXAdapter4.1.3.zip">Download</a>
+                                                <br/>
+                                                <a href="https://dl.bintray.com/ironsource-mobile/ios-adapters/HyprMX_xcframework_v5.2.0.zip">Frameworks</a>
+                                                <br/>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>InMobi</td>
+                                        <td>9.0.1</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td>
+                                            <a href="https://developers.ironsrc.com/ironsource-mobile/ios/inmobi-mediation-guide/" target="_blank" rel="noopener">Guide</a>
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                <a href="https://dl.bintray.com/ironsource-mobile/ios-adapters/ISInMobiAdapter4.3.3.zip">Download</a>
+                                                <br/>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maio</td>
+                                        <td>1.5.1</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">–</td>
+                                        <td>
+                                            <a href="https://developers.ironsrc.com/ironsource-mobile/ios/maio-mediation-integration-guide/" target="_blank" rel="noopener">Guide</a>
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                <a href="https://dl.bintray.com/ironsource-mobile/ios-adapters/ISMaioAdapter4.1.4.zip">Download</a>
+                                                <br/>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mintegral</td>
+                                        <td>6.1.3</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td>
+                                            <a href="https://developers.ironsrc.com/ironsource-mobile/ios/mintegral-integration-guide/" target="_blank" rel="noopener">Guide</a>
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                <a href="https://dl.bintray.com/ironsource-mobile/ios-adapters/ISMintegralAdapter4.3.1.zip">Download</a>
+                                                <br/>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pangle</td>
+                                        <td>2.9.0.1</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">–</td>
+                                        <td>
+                                            <a href="https://developers.ironsrc.com/ironsource-mobile/ios/pangle-integration-guide/" target="_blank" rel="noopener">Guide</a>
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                <a href="https://dl.bintray.com/ironsource-mobile/ios-adapters/ISTikTokAdapter4.1.3.zip">Download</a>
+                                                <br/>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tapjoy</td>
+                                        <td>12.4.2</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">–</td>
+                                        <td>
+                                            <a href="https://developers.ironsrc.com/ironsource-mobile/ios/tapjoy-mediation-guide/" target="_blank" rel="noopener">Guide</a>
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                <a href="https://dl.bintray.com/ironsource-mobile/ios-adapters/ISTapjoyAdapter4.1.10.zip">Download</a>
+                                                <br/>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>UnityAds</td>
+                                        <td>3.4.2</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td>
+                                            <a href="https://developers.ironsrc.com/ironsource-mobile/ios/unityads-mediation-guide/" target="_blank" rel="noopener">Guide</a>
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                <a href="https://dl.bintray.com/ironsource-mobile/ios-adapters/ISUnityAdsAdapter4.3.1.zip">Download</a>
+                                                <br/>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vungle</td>
+                                        <td>6.5.3</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td style="text-align: center">✔</td>
+                                        <td>
+                                            <a href="https://developers.ironsrc.com/ironsource-mobile/ios/vungle-mediation-guide/" target="_blank" rel="noopener">Guide</a>
+                                        </td>
+                                        <td>
+                                            <strong>
+                                                <a href="https://dl.bintray.com/ironsource-mobile/ios-adapters/ISVungleAdapter4.3.0.zip">Download</a>
+                                                <br/>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </p>
+                        <div class="alert alert_list">
+                            The ironSource Adapters expedite the implementation of multiple ad networks in your app. An adapter contains the SDK of a specific ad network as well as the code needed to operate the ad network. <strong>There is no need to integrate any additional SDKs or implement any further code in your app unless indicated specifically in the table above.</strong>
+                            It would just be extra work that has already been done for you!
+                        </div>
+                        <h2>ironSource SDK &amp;Adapter Compatibility</h2>
+                        <p>
+                            <span>
+                                <div class="sc_matrix">
+                                    <div class="sc_matrix_dropdown">
+                                        SDK version &nbsp;
+                                        <div class="dropholder">
+                                            <label for="focus_mobile_ios">6.16.1            </label>
+                                            <input id="focus_mobile_ios" type="text">
+                                            <div class="cover"></div>
+                                            <ul class="values">
+                                                <li>
+                                                    <a href="#6.10.0">6.10.0                        </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#6.11.0">6.11.0                        </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#6.12.0">6.12.0                        </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#6.13.0">6.13.0                        </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#6.13.0.1">6.13.0.1                        </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#6.14.0">6.14.0                        </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#6.15.0">6.15.0                        </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#6.15.0.1">6.15.0.1                        </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#6.16.0">6.16.0                        </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#6.16.1">6.16.1                        </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        is compatible with:
+
+                                    </div>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Ad Network</th>
+                                                <th>Adapter Version</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr data-sdk="6.10.0">
+                                                <td>AdColony</td>
+                                                <td>4.1.6</td>
+                                            </tr>
+                                            <tr data-sdk="6.10.0">
+                                                <td>AdMob</td>
+                                                <td>4.3.6,4.3.7</td>
+                                            </tr>
+                                            <tr data-sdk="6.10.0">
+                                                <td>Amazon</td>
+                                                <td>4.3.0</td>
+                                            </tr>
+                                            <tr data-sdk="6.10.0">
+                                                <td>AppLovin</td>
+                                                <td>4.3.6</td>
+                                            </tr>
+                                            <tr data-sdk="6.10.0">
+                                                <td>Chartboost</td>
+                                                <td>4.1.6</td>
+                                            </tr>
+                                            <tr data-sdk="6.10.0">
+                                                <td>Facebook</td>
+                                                <td>4.3.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.10.0">
+                                                <td>Fyber</td>
+                                                <td>4.3.1</td>
+                                            </tr>
+                                            <tr data-sdk="6.10.0">
+                                                <td>HyprMX</td>
+                                                <td>4.1.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.10.0">
+                                                <td>InMobi</td>
+                                                <td>4.3.1</td>
+                                            </tr>
+                                            <tr data-sdk="6.10.0">
+                                                <td>Maio</td>
+                                                <td>4.1.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.10.0">
+                                                <td>Mintegral</td>
+                                                <td>4.1.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.10.0">
+                                                <td>Tapjoy</td>
+                                                <td>4.1.7</td>
+                                            </tr>
+                                            <tr data-sdk="6.10.0">
+                                                <td>Pangle</td>
+                                                <td>4.1.1</td>
+                                            </tr>
+                                            <tr data-sdk="6.10.0">
+                                                <td>UnityAds</td>
+                                                <td>4.1.6</td>
+                                            </tr>
+                                            <tr data-sdk="6.10.0">
+                                                <td>Vungle</td>
+                                                <td>4.1.7</td>
+                                            </tr>
+                                            <tr data-sdk="6.11.0">
+                                                <td>AdColony</td>
+                                                <td>4.1.7</td>
+                                            </tr>
+                                            <tr data-sdk="6.11.0">
+                                                <td>AdMob</td>
+                                                <td>4.3.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.11.0">
+                                                <td>Amazon</td>
+                                                <td>4.3.1</td>
+                                            </tr>
+                                            <tr data-sdk="6.11.0">
+                                                <td>AppLovin</td>
+                                                <td>4.3.7</td>
+                                            </tr>
+                                            <tr data-sdk="6.11.0">
+                                                <td>Chartboost</td>
+                                                <td>4.1.7</td>
+                                            </tr>
+                                            <tr data-sdk="6.11.0">
+                                                <td>Facebook</td>
+                                                <td>4.3.9</td>
+                                            </tr>
+                                            <tr data-sdk="6.11.0">
+                                                <td>Fyber</td>
+                                                <td>4.3.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.11.0">
+                                                <td>HyprMX</td>
+                                                <td>4.1.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.11.0">
+                                                <td>InMobi</td>
+                                                <td>4.3.2, 4.3.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.11.0">
+                                                <td>Maio</td>
+                                                <td>4.1.4</td>
+                                            </tr>
+                                            <tr data-sdk="6.11.0">
+                                                <td>Mintegral</td>
+                                                <td>4.1.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.11.0">
+                                                <td>Tapjoy</td>
+                                                <td>4.1.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.11.0">
+                                                <td>Pangle</td>
+                                                <td>4.1.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.11.0">
+                                                <td>UnityAds</td>
+                                                <td>4.1.7, 4.1.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.11.0">
+                                                <td>Vungle</td>
+                                                <td>4.1.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.12.0">
+                                                <td>AdColony</td>
+                                                <td>4.1.7</td>
+                                            </tr>
+                                            <tr data-sdk="6.12.0">
+                                                <td>AdMob</td>
+                                                <td>4.3.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.12.0">
+                                                <td>Amazon</td>
+                                                <td>4.3.1</td>
+                                            </tr>
+                                            <tr data-sdk="6.12.0">
+                                                <td>AppLovin</td>
+                                                <td>4.3.7</td>
+                                            </tr>
+                                            <tr data-sdk="6.12.0">
+                                                <td>Chartboost</td>
+                                                <td>4.1.7</td>
+                                            </tr>
+                                            <tr data-sdk="6.12.0">
+                                                <td>Facebook</td>
+                                                <td>4.3.9</td>
+                                            </tr>
+                                            <tr data-sdk="6.12.0">
+                                                <td>Fyber</td>
+                                                <td>4.3.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.12.0">
+                                                <td>HyprMX</td>
+                                                <td>4.1.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.12.0">
+                                                <td>InMobi</td>
+                                                <td>4.3.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.12.0">
+                                                <td>Maio</td>
+                                                <td>4.1.4</td>
+                                            </tr>
+                                            <tr data-sdk="6.12.0">
+                                                <td>Mintegral</td>
+                                                <td>4.1.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.12.0">
+                                                <td>Tapjoy</td>
+                                                <td>4.1.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.12.0">
+                                                <td>Pangle</td>
+                                                <td>4.1.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.12.0">
+                                                <td>UnityAds</td>
+                                                <td>4.1.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.12.0">
+                                                <td>Vungle</td>
+                                                <td>4.1.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0">
+                                                <td>AdColony</td>
+                                                <td>4.1.7</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0">
+                                                <td>AdMob</td>
+                                                <td>4.3.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0">
+                                                <td>Amazon</td>
+                                                <td>4.3.1</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0">
+                                                <td>AppLovin</td>
+                                                <td>4.3.7</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0">
+                                                <td>Chartboost</td>
+                                                <td>4.1.7</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0">
+                                                <td>Facebook</td>
+                                                <td>4.3.9</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0">
+                                                <td>Fyber</td>
+                                                <td>4.3.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0">
+                                                <td>HyprMX</td>
+                                                <td>4.1.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0">
+                                                <td>InMobi</td>
+                                                <td>4.3.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0">
+                                                <td>Maio</td>
+                                                <td>4.1.4</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0">
+                                                <td>Mintegral</td>
+                                                <td>4.1.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0">
+                                                <td>Tapjoy</td>
+                                                <td>4.1.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0">
+                                                <td>Pangle</td>
+                                                <td>4.1.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0">
+                                                <td>UnityAds</td>
+                                                <td>4.1.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0">
+                                                <td>Vungle</td>
+                                                <td>4.1.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0.1">
+                                                <td>AdColony</td>
+                                                <td>4.1.7, 4.1.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0.1">
+                                                <td>AdMob</td>
+                                                <td>4.3.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0.1">
+                                                <td>Amazon</td>
+                                                <td>4.3.1</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0.1">
+                                                <td>AppLovin</td>
+                                                <td>4.3.7, 4.3.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0.1">
+                                                <td>Chartboost</td>
+                                                <td>4.1.7</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0.1">
+                                                <td>Facebook</td>
+                                                <td>4.3.9, 4.3.10</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0.1">
+                                                <td>Fyber</td>
+                                                <td>4.3.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0.1">
+                                                <td>HyprMX</td>
+                                                <td>4.1.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0.1">
+                                                <td>InMobi</td>
+                                                <td>4.3.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0.1">
+                                                <td>Maio</td>
+                                                <td>4.1.4</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0.1">
+                                                <td>Mintegral</td>
+                                                <td>4.1.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0.1">
+                                                <td>Pangle</td>
+                                                <td>4.1.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0.1">
+                                                <td>Tapjoy</td>
+                                                <td>4.1.8, 4.1.9</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0.1">
+                                                <td>UnityAds</td>
+                                                <td>4.1.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.13.0.1">
+                                                <td>Vungle</td>
+                                                <td>4.1.8, 4.1.9</td>
+                                            </tr>
+                                            <tr data-sdk="6.14.0">
+                                                <td>AdColony</td>
+                                                <td>4.1.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.14.0">
+                                                <td>AdMob</td>
+                                                <td>4.3.8, 4.3.9</td>
+                                            </tr>
+                                            <tr data-sdk="6.14.0">
+                                                <td>Amazon</td>
+                                                <td>4.3.1, 4.3.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.14.0">
+                                                <td>AppLovin</td>
+                                                <td>4.3.8, 4.3.9</td>
+                                            </tr>
+                                            <tr data-sdk="6.14.0">
+                                                <td>Chartboost</td>
+                                                <td>4.1.7</td>
+                                            </tr>
+                                            <tr data-sdk="6.14.0">
+                                                <td>Facebook</td>
+                                                <td>4.3.10, 4.3.11, 4.3.12</td>
+                                            </tr>
+                                            <tr data-sdk="6.14.0">
+                                                <td>Fyber</td>
+                                                <td>4.3.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.14.0">
+                                                <td>HyprMx</td>
+                                                <td>4.1.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.14.0">
+                                                <td>InMobi</td>
+                                                <td>4.3.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.14.0">
+                                                <td>Maio</td>
+                                                <td>4.1.4</td>
+                                            </tr>
+                                            <tr data-sdk="6.14.0">
+                                                <td>Mintegral</td>
+                                                <td>4.1.3, 4.1.4</td>
+                                            </tr>
+                                            <tr data-sdk="6.14.0">
+                                                <td>Pangle</td>
+                                                <td>4.1.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.14.0">
+                                                <td>Tapjoy</td>
+                                                <td>4.1.9</td>
+                                            </tr>
+                                            <tr data-sdk="6.14.0">
+                                                <td>UnityAds</td>
+                                                <td>4.1.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.14.0">
+                                                <td>Vungle</td>
+                                                <td>4.1.9</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0">
+                                                <td>AdColony</td>
+                                                <td>4.1.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0">
+                                                <td>AdMob</td>
+                                                <td>4.3.9</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0">
+                                                <td>Amazon</td>
+                                                <td>4.3.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0">
+                                                <td>AppLovin</td>
+                                                <td>4.3.9</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0">
+                                                <td>Chartboost</td>
+                                                <td>4.1.7</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0">
+                                                <td>Facebook</td>
+                                                <td>4.3.12</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0">
+                                                <td>Fyber</td>
+                                                <td>4.3.2, 4.3.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0">
+                                                <td>HyprMx</td>
+                                                <td>4.1.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0">
+                                                <td>InMobi</td>
+                                                <td>4.3.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0">
+                                                <td>Maio</td>
+                                                <td>4.1.4</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0">
+                                                <td>Mintegral</td>
+                                                <td>4.1.4</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0">
+                                                <td>Pangle</td>
+                                                <td>4.1.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0">
+                                                <td>Tapjoy</td>
+                                                <td>4.1.9</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0">
+                                                <td>UnityAds</td>
+                                                <td>4.1.8</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0">
+                                                <td>Vungle</td>
+                                                <td>4.1.9</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0.1">
+                                                <td>AdColony</td>
+                                                <td>4.1.8, 4.3.0</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0.1">
+                                                <td>AdMob</td>
+                                                <td>4.3.9, 4.3.10</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0.1">
+                                                <td>Amazon</td>
+                                                <td>4.3.2, 4.3.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0.1">
+                                                <td>AppLovin</td>
+                                                <td>4.3.9, 4.3.10</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0.1">
+                                                <td>Chartboost</td>
+                                                <td>4.1.7, 4.3.0</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0.1">
+                                                <td>Facebook</td>
+                                                <td>4.3.12, 4.3.13</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0.1">
+                                                <td>Fyber</td>
+                                                <td>4.3.3, 4.3.4</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0.1">
+                                                <td>HyprMx</td>
+                                                <td>4.1.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0.1">
+                                                <td>InMobi</td>
+                                                <td>4.3.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0.1">
+                                                <td>Maio</td>
+                                                <td>4.1.4</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0.1">
+                                                <td>Mintegral</td>
+                                                <td>4.1.4, 4.3.0</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0.1">
+                                                <td>Pangle</td>
+                                                <td>4.1.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0.1">
+                                                <td>Tapjoy</td>
+                                                <td>4.1.9</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0.1">
+                                                <td>UnityAds</td>
+                                                <td>4.3.0</td>
+                                            </tr>
+                                            <tr data-sdk="6.15.0.1">
+                                                <td>Vungle</td>
+                                                <td>4.1.9</td>
+                                            </tr>
+                                            <tr data-sdk="6.16.0">
+                                                <td>AdColony</td>
+                                                <td>4.3.0</td>
+                                            </tr>
+                                            <tr data-sdk="6.16.0">
+                                                <td>AdMob</td>
+                                                <td>4.3.10</td>
+                                            </tr>
+                                            <tr data-sdk="6.16.0">
+                                                <td>Amazon</td>
+                                                <td>4.3.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.16.0">
+                                                <td>AppLovin</td>
+                                                <td>4.3.10</td>
+                                            </tr>
+                                            <tr data-sdk="6.16.0">
+                                                <td>Chartboost</td>
+                                                <td>4.3.0</td>
+                                            </tr>
+                                            <tr data-sdk="6.16.0">
+                                                <td>Facebook</td>
+                                                <td>4.3.13, 4.3.14</td>
+                                            </tr>
+                                            <tr data-sdk="6.16.0">
+                                                <td>Fyber</td>
+                                                <td>4.3.4</td>
+                                            </tr>
+                                            <tr data-sdk="6.16.0">
+                                                <td>HyprMx</td>
+                                                <td>4.1.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.16.0">
+                                                <td>InMobi</td>
+                                                <td>4.3.3</td>
+                                            </tr>
+                                            <tr data-sdk="6.16.0">
+                                                <td>Maio</td>
+                                                <td>4.1.4</td>
+                                            </tr>
+                                            <tr data-sdk="6.16.0">
+                                                <td>Mintegral</td>
+                                                <td>4.3.0, 4.3.1</td>
+                                            </tr>
+                                            <tr data-sdk="6.16.0">
+                                                <td>Pangle</td>
+                                                <td>4.1.2</td>
+                                            </tr>
+                                            <tr data-sdk="6.16.0">
+                                                <td>Tapjoy</td>
+                                                <td>4.1.9, 4.1.10</td>
+                                            </tr>
+                                            <tr data-sdk="6.16.0">
+                                                <td>UnityAds</td>
+                                                <td>4.3.0, 4.3.1</td>
+                                            </tr>
+                                            <tr data-sdk="6.16.0">
+                                                <td>Vungle</td>
+                                                <td>4.1.9, 4.1.10, 4.3.0</td>
+                                            </tr>
+                                            <tr class="current" data-sdk="6.16.1">
+                                                <td>AdColony</td>
+                                                <td>4.3.0</td>
+                                            </tr>
+                                            <tr class="current" data-sdk="6.16.1">
+                                                <td>AdMob</td>
+                                                <td>4.3.10</td>
+                                            </tr>
+                                            <tr class="current" data-sdk="6.16.1">
+                                                <td>Amazon</td>
+                                                <td>4.3.3</td>
+                                            </tr>
+                                            <tr class="current" data-sdk="6.16.1">
+                                                <td>AppLovin</td>
+                                                <td>4.3.10</td>
+                                            </tr>
+                                            <tr class="current" data-sdk="6.16.1">
+                                                <td>Chartboost</td>
+                                                <td>4.3.0</td>
+                                            </tr>
+                                            <tr class="current" data-sdk="6.16.1">
+                                                <td>Facebook</td>
+                                                <td>4.3.14</td>
+                                            </tr>
+                                            <tr class="current" data-sdk="6.16.1">
+                                                <td>Fyber</td>
+                                                <td>4.3.4</td>
+                                            </tr>
+                                            <tr class="current" data-sdk="6.16.1">
+                                                <td>HyprMx</td>
+                                                <td>4.1.3</td>
+                                            </tr>
+                                            <tr class="current" data-sdk="6.16.1">
+                                                <td>InMobi</td>
+                                                <td>4.3.3</td>
+                                            </tr>
+                                            <tr class="current" data-sdk="6.16.1">
+                                                <td>Maio</td>
+                                                <td>4.1.4</td>
+                                            </tr>
+                                            <tr class="current" data-sdk="6.16.1">
+                                                <td>Mintegral</td>
+                                                <td>4.3.1</td>
+                                            </tr>
+                                            <tr class="current" data-sdk="6.16.1">
+                                                <td>Pangle</td>
+                                                <td>4.1.3</td>
+                                            </tr>
+                                            <tr class="current" data-sdk="6.16.1">
+                                                <td>Tapjoy</td>
+                                                <td>4.1.10</td>
+                                            </tr>
+                                            <tr class="current" data-sdk="6.16.1">
+                                                <td>UnityAds</td>
+                                                <td>4.3.1</td>
+                                            </tr>
+                                            <tr class="current" data-sdk="6.16.1">
+                                                <td>Vungle</td>
+                                                <td>4.3.0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </span>
+                        </p>
+                        <div class="alert alert_default">
+                            <strong>Ad Network Integration Verification</strong>
+</p>
+<p>
+    The ironSource SDK provides an easy way to verify that your Mediation integration was completed successfully. To verify the ironSource SDK as well as the other mediation adapters integration, follow this <a href="/ironsource-mobile/ios/integration-helper-ios/">document</a>
+    .
+</div><div class="alert alert_default">You can read this article in:
+</p>
+<ul>
+    <li>
+        <a href="/ironsource-mobile/ios/mediation-networks-ios-japanese/" target="_blank" rel="noopener noreferrer">Japanese</a>
+    </li>
+    <li>
+        <a href="/ironsource-mobile/ios/mediation-networks-ios-korean/" target="_blank" rel="noopener noreferrer">Korean </a>
+    </li>
+    <li>
+        <a href="/ironsource-mobile/ios/mediation-networks-ios-chinese/" target="_blank" rel="noopener noreferrer">Chinese</a>
+    </li>
+</ul>
+</div>
+<div class="feedback_widget">
+    <div class="heading">
+        <div class="widget-title">Was this article helpful?</div>
+    </div>
+    <a href="#" class="submit-btn" data-id="11631" data-type="positive">Yes</a>
+    <a href="#" class="submit-btn neg" data-id="11631" data-type="negative">No</a>
+</div>
+</article></div>
+<div class="d-column_2 col-hidemob">
+    <div id="table-of-contents" class="table-of-contents" hidden></div>
+</div>
+</div></div><div id="indd"></div>
+</div>
+<!--    #content-->
+</div>
+<!-- #wrap-->
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPCWPFP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- TrenDemon Code -->
+<script type="text/javascript" id="trd-flame-load">
+    var JsDomain = "https://prod.trendemon.com/apis/loadflame/mainflamejs";
+    var param = "aid=1847&uid=1866&baseurl=https%3A%2F%2Fprod.trendemon.com%2F&appid=208770359181748";
+    (function(w, d) {
+        function go() {
+            setTimeout(function() {
+                var bi = document.createElement("script");
+                bi.type = "text/javascript";
+                bi.async = true;
+                bi.src = JsDomain + "?" + param;
+                bi.id = "trdflame";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bi, s);
+            }, 500);
+        }
+        if (w.addEventListener) {
+            w.addEventListener("load", go, false);
+        } else if (w.attachEvent) {
+            w.attachEvent("onload", go);
+        }
+    }(window, document));
+</script>
+<!-- End of TrenDemon Code -->
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var _wpcf7 = {
+        "loaderUrl": "https:\/\/developers.ironsrc.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif",
+        "recaptchaEmpty": "Please verify that you are not a robot.",
+        "sending": "Sending ...",
+        "cached": "1"
+    };
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.3.1'></script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-includes/js/jquery/ui/menu.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-includes/js/wp-a11y.min.js?ver=5.1.1'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var uiAutocompleteL10n = {
+        "noResults": "No results found.",
+        "oneResult": "1 result found. Use up and down arrow keys to navigate.",
+        "manyResults": "%d results found. Use up and down arrow keys to navigate.",
+        "itemSelected": "Item selected."
+    };
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var SearchAutocomplete = {
+        "ajaxurl": "https:\/\/developers.ironsrc.com\/wp-admin\/admin-ajax.php",
+        "fieldName": "[name=\"s\"]",
+        "minLength": "1",
+        "delay": "500",
+        "autoFocus": "false"
+    };
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-content/plugins/search-autocomplete/js/search-autocomplete.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-includes/js/comment-reply.min.js?ver=5.1.1'></script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-content/themes/knowledgecenter/js/vendor/clipboard.min.js?ver=20151221'></script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-content/themes/knowledgecenter/lib/prism/prism.js?ver=20151216'></script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-content/themes/knowledgecenter/js/plugins.js?ver=20151216'></script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-content/themes/knowledgecenter/js/vendor/typed.js?ver=20151216'></script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-content/themes/knowledgecenter/js/vendor/owl.carousel.min.js?ver=20151221'></script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-content/themes/knowledgecenter/js/gallery-youtube-scripts.js?ver=20180117'></script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-content/themes/knowledgecenter/js/vendor/jquery.cookie.js?ver=20151216'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var ajax_object = {
+        "ajax_url": "https:\/\/developers.ironsrc.com\/wp-admin\/admin-ajax.php"
+    };
+    var sdk_data = {
+        "sdk_maven": "dependencies {\r\n    implementation 'com.ironsource.sdk:mediationsdk:6.16.1' \r\n}",
+        "sdk_cocoapods": "pod 'IronSourceSDK','6.16.1.0'",
+        "AdColony": {
+            "code": "pod 'IronSourceAdColonyAdapter','4.3.0.2'",
+            "dependency": false,
+            "maven": false
+        },
+        "AdMob": {
+            "code": "pod 'IronSourceAdMobAdapter','4.3.10.2'",
+            "dependency": false,
+            "maven": false
+        },
+        "Amazon": {
+            "code": "pod 'IronSourceAmazonAdapter','4.3.3.2'",
+            "dependency": false,
+            "maven": false
+        },
+        "AppLovin": {
+            "code": "pod 'IronSourceAppLovinAdapter','4.3.10.2'",
+            "dependency": false,
+            "maven": false
+        },
+        "Chartboost": {
+            "code": "pod 'IronSourceChartboostAdapter','4.3.0.2'",
+            "dependency": false,
+            "maven": false
+        },
+        "Facebook": {
+            "code": "pod 'IronSourceFacebookAdapter','4.3.14.1'",
+            "dependency": false,
+            "maven": false
+        },
+        "Fyber": {
+            "code": " pod 'IronSourceFyberAdapter','4.3.4.2'",
+            "dependency": false,
+            "maven": false
+        },
+        "HyprMX": {
+            "code": "pod 'IronSourceHyprMXAdapter','4.1.3.8'\r\n",
+            "dependency": false,
+            "maven": false
+        },
+        "InMobi": {
+            "code": "pod 'IronSourceInMobiAdapter','4.3.3.8'",
+            "dependency": false,
+            "maven": false
+        },
+        "Maio": {
+            "code": "pod 'IronSourceMaioAdapter','4.1.4.8'",
+            "dependency": false,
+            "maven": false
+        },
+        "Mintegral": {
+            "code": "pod 'IronSourceMintegralAdapter','4.3.1.1'",
+            "dependency": false,
+            "maven": false
+        },
+        "Pangle": {
+            "code": "pod 'IronSourcePangleAdapter','4.1.3.0'",
+            "dependency": false,
+            "maven": false
+        },
+        "Tapjoy": {
+            "code": "pod 'IronSourceTapjoyAdapter','4.1.10.1'",
+            "dependency": false,
+            "maven": false
+        },
+        "UnityAds": {
+            "code": "pod 'IronSourceUnityAdsAdapter','4.3.1.1'",
+            "dependency": false,
+            "maven": false
+        },
+        "Vungle": {
+            "code": "pod 'IronSourceVungleAdapter','4.3.0.1'",
+            "dependency": false,
+            "maven": false
+        }
+    };
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-content/themes/knowledgecenter/dist/bundle.js?ver=20190320'></script>
+<script type='text/javascript' src='https://developers.ironsrc.com/wp-includes/js/wp-embed.min.js?ver=5.1.1'></script>
+</body></html>
