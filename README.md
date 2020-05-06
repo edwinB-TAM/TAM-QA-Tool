@@ -11,7 +11,7 @@ This tool will eventually be ran via a terminal command, will insert instruction
 
 #### Milestone #1
 
-Scrape the changelogs and store them in a dictionary "Done"
+Scrape the changelogs and store them in a dictionary *Done*
 
 #### Milestone #2
 
