@@ -24,20 +24,17 @@ def integrationHelperPaser(filename):
         # parsing though the logs creating an instance of the network name
             for match in re.finditer(network,line):
                 network_name = match.group(2)
-                #print (network_name)
             for match in re.finditer(adapter,line):
-                # creating an array with the [network,adapter_version]
                 adapter_version = match.group(2)
-                #print (adapter_version)
                 networks[network_name] = adapter_version
-                #network_adapter = [network_name,adapter_version]
-                #if (network_adapter == ['IronSource', re.compile("[0-9.]+\S")]):
-                # if (network_adapter == ['IronSource', "6.14.0"]):
-                #     ironSourceSDK = network_adapter
-                #     print (ironSourceSDK)
-                # else:
-                print(networks)
+    #comparingDictionary(networks)
 
+def comparingDictionary(data):
+    networks = data
+    if networks.keys() == "IronSource":
+        print("compared")
+    else:
+        print("did not compare")
 
 integrationHelperPaser(textfile)
 
