@@ -39,13 +39,11 @@ for item in all_tables:
             # will pass ironSourceSDK version from integrationHelperPaser
             if (item[key] =='6.16.1'):
                 print(item[key])
-                #print(key, item.attrs[key])
-                #print(key, item.attrs.get(key))
                 rows = item.find_all('td')
                 adapter_name = rows[0].text
-                print('     Name:', adapter_name)
+                print('adapter_name:', adapter_name)
                 adapter_version = rows[1].text
-                print('  Version:', adapter_version)
+                print('adapter_version:', adapter_version)
 
 # Output:
 # 6.16.1
