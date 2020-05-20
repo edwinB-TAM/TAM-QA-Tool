@@ -7,7 +7,9 @@ To help the TAM team automate components of the QA process by utilizing the data
 ## Prerequisites 
 
 `pip install panda`
+
 `pip install selenium`
+
 `pip install beautifulsoup`
 
 ## Getting Started
