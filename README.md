@@ -25,7 +25,6 @@ Scrape the changelogs and store them in a dictionary **Done**
 - [ ] [*Feature*]Get input(logs) from command line
 
 #### Milestone #2
-
 Using beautifulSoup, scrape the knowlege center changelogs for SDK and network adapter compatibility **In Progress**
 
 - [ ] Scrape KC unsing selenium webdriver
