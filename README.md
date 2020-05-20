@@ -18,13 +18,23 @@ This tool will eventually be ran via a terminal command, will insert instruction
 
 #### Milestone #1
 
-Scrape the changelogs and store them in a dictionary *Done*
+Scrape the changelogs and store them in a dictionary **Done**
+
+- [x] Scrape IntegrationHelperLogs.txt
+- [x] Create a dict and store keys,values
+- [ ] [*Feature*]Get input(logs) from command line
 
 #### Milestone #2
 
-Using beautifulSoup, scrape the knowlege center changelogs for SDK and network adapter compatibility "In Progress"
+Using beautifulSoup, scrape the knowlege center changelogs for SDK and network adapter compatibility **In Progress**
 
-##### Blocker:
+- [ ] Scrape KC unsing selenium webdriver
+- [x] [*Workaround*]Scrape HTML
+- [x] Isolate the compatibility table
+- [ ] Create a dict with values, keys
+- [ ] Store values according to ironsource SDK and adapters
+
+##### Blocker: 
 Looking for a way to lookup by 'data-sdk' version and comparing networks, network_version to integrationHelperParser results. At the moment I'm able to scrape the tables but not by version. 
 ```
 <tr data-sdk="6.14.0">
@@ -41,9 +51,12 @@ Actual Results:
   ['Chartboost', '4.1.6']
   ...
 ```
+
 #### Milestone #3
 
-
+- [ ] Retrieve values from both ***Milestones 1+2*** and compare values
+- [ ] Output results(_email|.txt_)
+- [ ] [*Feature*]Create script; user will only need to input integrationHelperLogs .txt file
 
 ## Built With
 
