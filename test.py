@@ -10,30 +10,31 @@ from pandas.io.html import read_html
 page = open('knowledge_center.html')
 soup = BeautifulSoup(page, 'html.parser')
 
-# all_tables = soup.find_all('tr')
-# single_tables = soup.find_all('td')
-#
-#
-# #looping through all <tr> tags
-# for item in all_tables:
-#     #getting the sdk version and assigning a key
-#     for key in item.attrs.keys():
-#         if key.startswith('data-sdk'):
-#             # print(key, item[key])
-#             # print(key, item.attrs[key])
-#             print("Attrs: "+ key, item.attrs.values())
-#             # print(key, item.attrs.values())
-#             # for value in single_tables:
-#             #     print("Key: ")
-#             #     print(value)
+all_tables = soup.find_all('tr')
+single_tables = soup.find_all('td')
+
+
+#looping through all <tr> tags
+for item in all_tables:
+    for key in item.attrs.keys():
+        if key.startswith('data-'):
+            if (item[key] =='6.16.1'):
+                print(item[key])
+                #print(key, item.attrs[key])
+                #print(key, item.attrs.get(key))
+                rows = item.find_all('td')
+                adapter_name = rows[0].text
+                print('     Name:', adapter_name)
+                adapter_version = rows[1].text
+                print('  Version:', adapter_version)
 
 
 
 # dfs = pd.read_html('knowledge_center.html', header=0)
 # for df in dfs:
 #     print(df)
-
-page = 'knowledge_center.html'
+#
+# page = 'knowledge_center.html'
 
 #Gets the Compatibility tables
 # TODO: Find a way to retrieve <td data-sdk=[version]
@@ -59,8 +60,8 @@ page = 'knowledge_center.html'
 # print(version_compat)
 
 #alternate way to retrieve table
-table = soup.find('table')
-table_rows = soup.find_all('tr')
+# table = soup.find('table')
+# table_rows = soup.find_all('tr')
 
 # for item in all_tables:
 #     #getting the sdk version and assigning a key
@@ -74,9 +75,9 @@ table_rows = soup.find_all('tr')
 # ['AppLovin', '4.3.6']
 # ['Chartboost', '4.1.6']
 
-for tr in table_rows:
-    for key in tr.attrs.keys():
-        if key.startswith('data-sdk'):
-            td = tr.find_all('td')
-            row = [i.text for i in td]
-            print(row)
+# for tr in table_rows:
+#     for key in tr.attrs.keys():
+#         if key.startswith('data-sdk'):
+#             td = tr.find_all('td')
+#             row = [i.text for i in td]
+#             print(row)
