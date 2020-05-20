@@ -13,23 +13,6 @@ soup = BeautifulSoup(page, 'html.parser')
 all_tables = soup.find_all('tr')
 single_tables = soup.find_all('td')
 
-
-#looping through all <tr> tags
-for item in all_tables:
-    for key in item.attrs.keys():
-        if key.startswith('data-'):
-            if (item[key] =='6.16.1'):
-                print(item[key])
-                #print(key, item.attrs[key])
-                #print(key, item.attrs.get(key))
-                rows = item.find_all('td')
-                adapter_name = rows[0].text
-                print('     Name:', adapter_name)
-                adapter_version = rows[1].text
-                print('  Version:', adapter_version)
-
-
-
 # dfs = pd.read_html('knowledge_center.html', header=0)
 # for df in dfs:
 #     print(df)

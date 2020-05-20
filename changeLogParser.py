@@ -32,14 +32,14 @@ from pandas.io.html import read_html
 #alternate way to retrieve table
 # #looping through all <tr> tags
 #looping through all <tr> tags
-for item in all_tables:
-    for key in item.attrs.keys():
-        if key.startswith('data-'):
+for coll in all_tables:
+    for keys in item.attrs.keys():
+        if keys.startswith('data-'):
             #'6.16.1' is a placeholder for a dynamic ironsource sdk versions
             # will pass ironSourceSDK version from integrationHelperPaser
-            if (item[key] =='6.16.1'):
-                print(item[key])
-                rows = item.find_all('td')
+            if (coll[keys] =='6.16.1'):
+                print(coll[keys])
+                rows = coll.find_all('td')
                 adapter_name = rows[0].text
                 print('adapter_name:', adapter_name)
                 adapter_version = rows[1].text
