@@ -4,7 +4,7 @@
 
 To help the TAM team automate components of the QA process by utilizing the data from IntegrationHelperlogs and comparing them to our knowledge center changelogs. This will help us determine whether an adapter is compatible with the SDK in testing.
 
-## Prerequisites 
+## Prerequisites
 
 `pip install panda`
 
@@ -25,7 +25,7 @@ Scrape the changelogs and store them in a dictionary **Done**
 - [ ] [*Feature*]Get input(logs) from command line
 
 #### Milestone #2
-Using beautifulSoup, scrape the knowlege center changelogs for SDK and network adapter compatibility **In Progress**
+Using beautifulSoup, scrape the knowledge center changelogs for SDK and network adapter compatibility **In Progress**
 
 - [ ] Scrape KC unsing selenium webdriver
 - [x] [*Workaround*]Scrape HTML
@@ -34,7 +34,7 @@ Using beautifulSoup, scrape the knowlege center changelogs for SDK and network a
 - [x] Store values according to ironsource SDK and adapters
 
 ##### Blocker: (Fixed)
-Looking for a way to lookup by 'data-sdk' version and comparing networks, network_version to integrationHelperParser results. At the moment I'm able to scrape the tables but not by version. 
+Looking for a way to lookup by 'data-sdk' version and comparing networks, network_version to integrationHelperParser results. At the moment I'm able to scrape the tables but not by version.
 ```
 <tr data-sdk="6.14.0">
     <td>UnityAds</td>
@@ -50,7 +50,7 @@ Actual Results:
   ['Chartboost', '4.1.6']
   ...
 ```
-##### Blocker: 
+##### Blocker:
 Was able to get passed the previous blocker, need to find a better way to structure the data at the moment to be able to manupulate. My actual results are stored as strings in my dictionary and makes it more difficult to access and compare
 
 What I'm looking for:
@@ -68,9 +68,12 @@ Actual Results:
 
 #### Milestone #3
 
-- [ ] Retrieve values from both ***Milestones 1+2*** and compare values
+- [x] Retrieve values from both ***Milestones 1+2*** and compare values
 - [ ] Output results(_email|.txt_)
 - [ ] [*Feature*]Create script; user will only need to input integrationHelperLogs .txt file
+
+#### Milestone #4 7/24
+- [ ] Beta version done; Fix bugs
 
 ## Built With
 
