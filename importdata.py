@@ -1,0 +1,2 @@
+from logic import ironSourceSDK_version
+print(ironSourceSDK_version)
