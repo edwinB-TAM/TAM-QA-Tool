@@ -30,10 +30,10 @@ Using beautifulSoup, scrape the knowlege center changelogs for SDK and network a
 - [ ] Scrape KC unsing selenium webdriver
 - [x] [*Workaround*]Scrape HTML
 - [x] Isolate the compatibility table
-- [ ] Create a dict with values, keys
-- [ ] Store values according to ironsource SDK and adapters
+- [x] Create a dict with values, keys
+- [x] Store values according to ironsource SDK and adapters
 
-##### Blocker: 
+##### Blocker: (Fixed)
 Looking for a way to lookup by 'data-sdk' version and comparing networks, network_version to integrationHelperParser results. At the moment I'm able to scrape the tables but not by version. 
 ```
 <tr data-sdk="6.14.0">
@@ -49,6 +49,21 @@ Actual Results:
   ['AppLovin', '4.3.6']
   ['Chartboost', '4.1.6']
   ...
+```
+##### Blocker: 
+Was able to get passed the previous blocker, need to find a better way to structure the data at the moment to be able to manupulate. My actual results are stored as strings in my dictionary and makes it more difficult to access and compare
+
+What I'm looking for:
+```
+{'6.14.0': {
+            'AdColony': ['4.1.8'],
+            'AdMob':[ '4.3.8', '4.3.9'],
+            'Amazon':['4.3.1', '4.3.2']
+            }
+```
+Actual Results:
+```
+{'Name': 'Amazon', 'Version': '4.3.1, 4.3.2'},
 ```
 
 #### Milestone #3
