@@ -32,7 +32,7 @@ def getIntegrationHelper(filename):
         # parsing though the logs creating an instance of the network name
             for match in re.finditer(network,line):
                 network_name = match.group(2)
-            for match in re.finditer(adapter,line):
+            for match in re.finditer(adapter,line): 
                 adapter_version = match.group(2)
                 networks[adapter_version] = network_name
                 if (network_name == "IronSource"):
