@@ -16,9 +16,9 @@ from array import *
 # TODO: create function for both behaviors
 # class integrationHelperParser:
 
-networks= {}
+user_active_networks= {}
 
-def getIntegrationHelper(filename):
+def get_integration_helper(filename):
     file = open(filename,"r")
     #Using regular expressions to detect patterns
     network_info = {'network':'version' }
@@ -32,50 +32,75 @@ def getIntegrationHelper(filename):
         # parsing though the logs creating an instance of the network name
             for match in re.finditer(network,line):
                 network_name = match.group(2)
-            for match in re.finditer(adapter,line): 
+            for match in re.finditer(adapter,line):
                 adapter_version = match.group(2)
-                networks[adapter_version] = network_name
+                user_active_networks[adapter_version] = network_name
                 if (network_name == "IronSource"):
                     ironSourceSDK = network_name
                     ironSourceSDK_version = adapter_version
 
+    change_log_networks = changelogparser.get_change_logs('6.14.0')
+    # Value Checks
+    print("The ironSourceSDK version: ")
+    print (ironSourceSDK_version)
+    print("Network Name: ")
+    print (ironSourceSDK)
+    print("User Active NetWorks: ")
+    print (user_active_networks)
+    print("ChangeLog networks: ")
+    pprint.pprint(change_log_networks)
+
+
+
 #Compares user integration helper logs to the knowledge center change logs
-def user_kc_comparison(testname, value, case_items):
+def user_kc_comparison(user_versions, user_networks, change_log_networks):
+    breakpoint()
     found = False
-    for item in case_items:
-        if (testname in item) and (value in item):
+    for change_log_version in change_log_networks.keys():
+        # print('Items: ', change_log_version)
+        # print('change_log_networks: ', change_log_networks.keys())
+        if (user_versions in change_log_version) and (user_networks in change_log_version):
+            print("here")
+            print('user_versions: ', user_versions)
+            print('change_log_version: ', change_log_version)
+            print('user_networks: ', user_networks)
+
             found = True
     if found:
-        print(value, ": Okay")
-        print(item)
+        print("here")
+        print('user_versions: ', user_versions)
+        print('change_log_version: ', change_log_version)
+        print('user_networks: ', user_networks)
+        #doesnt look to iterate through all networks
+        print(value, ": Compatible")
         return
-    print(value, ": Invalid")
-    print(item)
 
-def compare_items(case_items, test_case):
-    for testname, value in test_case.items():
-        user_kc_comparison(testname, value, case_items)
+    print(user_versions, ": Invalid")
+    print('user_versions: ', user_versions)
+    print('change_log_version: ', change_log_version)
+    print('user_networks: ', user_networks)
+
+def compare_items(change_log_networks, user_active_networks):
+    breakpoint()
+    for user_versions, user_networks in user_active_networks.items():
+        user_kc_comparison(user_versions, user_networks, change_log_networks)
 
 def main():
     textfile = 'test.txt'
-    getIntegrationHelper(textfile)
+    get_integration_helper(textfile)
     print('=' * 25)
-    data = changelogparser.getChangeLogs('6.14.0')
-    pprint.pprint(data)
-    for key, case_items in data.items():
-        print('Checking items for ', key)
-        print('=' * 25)
-        compare_items(case_items, networks)
+    change_logs = changelogparser.get_change_logs('6.14.0')
+    breakpoint()
+    for key, change_log_networks in change_logs.items():
+        # print('Checking SDK version: ', key)
+        # print('-' * 20)
+        # print(change_log_networks)
+        breakpoint()
+        compare_items(change_logs, user_active_networks)
         print('\n')
 main()
     # data = changelogparser.getChangeLogs('6.14.0')
-    # pprint.pprint(data)
-    # print("The ironSourceSDK version: ")
-    # print (ironSourceSDK_version)
-    # print("Network Name: ")
-    # print (ironSourceSDK)
-    # pprint.pprint(networks)
-    # print(networks.keys())
+
 
 
     # getDictionary(ironSourceSDK_version)
