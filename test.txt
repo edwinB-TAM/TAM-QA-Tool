@@ -84,7 +84,7 @@
 2020-04-06 12:50:36.461 31168-31244/? I/IntegrationHelper: com.unity3d.services.ads.adunit.AdUnitSoftwareActivity - VERIFIED
 2020-04-06 12:50:36.461 31168-31244/? I/IntegrationHelper: >>>> UnityAds - VERIFIED
 2020-04-06 12:50:36.461 31168-31244/? I/IntegrationHelper: --------------- Vungle --------------
-2020-04-06 12:50:36.453 31168-31244/? I/IntegrationHelper: Adapter 4.1.9 - VERIFIED
+2020-04-06 12:50:36.457 31168-31244/? E/IntegrationHelper: Adapter - MISSING
 2020-04-06 12:50:36.461 31168-31244/? E/IntegrationHelper: >>>> Vungle - NOT VERIFIED
 2020-04-06 12:50:36.462 31168-31414/? W/IntegrationHelper: --------------- Google Play Services --------------
 2020-04-06 12:50:36.464 31168-31414/? I/IntegrationHelper: Google Play Services - VERIFIED

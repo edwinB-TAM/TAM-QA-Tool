@@ -40,62 +40,65 @@ def get_integration_helper(filename):
                     ironSourceSDK_version = adapter_version
 
     change_log_networks = changelogparser.get_change_logs('6.14.0')
+    print('=' * 25)
+    print(user_active_networks)
     # Value Checks
-    print("The ironSourceSDK version: ")
-    print (ironSourceSDK_version)
-    print("Network Name: ")
-    print (ironSourceSDK)
-    print("User Active NetWorks: ")
-    print (user_active_networks)
-    print("ChangeLog networks: ")
-    pprint.pprint(change_log_networks)
+    # print("The ironSourceSDK version: ")
+    # print (ironSourceSDK_version)
+    # print("Network Name: ")
+    # print (ironSourceSDK)
+    # print("User Active NetWorks: ")
+    # print (user_active_networks)
+    # print("ChangeLog networks: ")
+    # pprint.pprint(change_log_networks)
 
 
 
 #Compares user integration helper logs to the knowledge center change logs
 def user_kc_comparison(user_versions, user_networks, change_log_networks):
-    breakpoint()
+    # breakpoint()
     found = False
     for change_log_version in change_log_networks.keys():
         # print('Items: ', change_log_version)
         # print('change_log_networks: ', change_log_networks.keys())
         if (user_versions in change_log_version) and (user_networks in change_log_version):
-            print("here")
-            print('user_versions: ', user_versions)
-            print('change_log_version: ', change_log_version)
-            print('user_networks: ', user_networks)
+            # print("here")
+            # print('user_versions: ', user_versions)
+            # print('change_log_version: ', change_log_version)
+            # print('user_networks: ', user_networks)
 
             found = True
     if found:
-        print("here")
-        print('user_versions: ', user_versions)
-        print('change_log_version: ', change_log_version)
-        print('user_networks: ', user_networks)
+        # print("here")
+        # print('user_versions: ', user_versions)
+        # print('change_log_version: ', change_log_version)
+        # print('user_networks: ', user_networks)
         #doesnt look to iterate through all networks
         print(value, ": Compatible")
         return
 
-    print(user_versions, ": Invalid")
-    print('user_versions: ', user_versions)
-    print('change_log_version: ', change_log_version)
-    print('user_networks: ', user_networks)
+    print(user_networks, ": Invalid")
+    # print('user_versions: ', user_versions)
+    # print('change_log_version: ', change_log_version)
+    # print('user_networks: ', user_networks)
 
 def compare_items(change_log_networks, user_active_networks):
-    breakpoint()
+    # breakpoint()
     for user_versions, user_networks in user_active_networks.items():
-        user_kc_comparison(user_versions, user_networks, change_log_networks)
+        # if (ironSourceSDK_version == change_log_version):
+        user_kc_comparison(user_versions,user_networks,change_log_networks)
 
 def main():
     textfile = 'test.txt'
     get_integration_helper(textfile)
     print('=' * 25)
     change_logs = changelogparser.get_change_logs('6.14.0')
-    breakpoint()
+    # breakpoint()
     for key, change_log_networks in change_logs.items():
-        # print('Checking SDK version: ', key)
-        # print('-' * 20)
+        print('Checking SDK version: ', key)
+        print('-' * 20)
         # print(change_log_networks)
-        breakpoint()
+        # breakpoint()
         compare_items(change_logs, user_active_networks)
         print('\n')
 main()

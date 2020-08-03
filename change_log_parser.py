@@ -1,12 +1,20 @@
+##add to Readme
 from bs4 import BeautifulSoup
+##add to Readme
 from selenium import webdriver
-import requests
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait 
+##add to Readme
+import selenium.webdriver.chrome.service as service
+##add to Readme
+# import requests
 import urllib
 import os, ssl
-import pandas as pd
+# import pandas as pd
 from pandas.io.html import read_html
 import pprint
-from __main__ import *
+import time
+
 
 # TODO: Same as other attempt, figure out how to search by <tr> content
 # Output:
@@ -35,17 +43,25 @@ from __main__ import *
 #looping through all <tr> tags
 
 class changelogparser:
-    def getChangeLogs(ironsrc_version):
-        page = open('knowledge_center.html')
-        soup = BeautifulSoup(page, 'html.parser')
-
+    def get_change_logs(ironsrc_version):
+        #Will open browser to retrive HTML
+        driver = webdriver.Chrome()
+        driver.get('https://developers.ironsrc.com/ironsource-mobile/android/mediation-networks-android')
+        try:
+            el = WebDriverWait(driver, 10).until(lambda d: d.find_element_by_tag_name("td"))
+        finally:
+            html = driver.page_source
+            driver.quit()
+        print('Retrieved mediation networks page')
+        # html = driver.page_source
+        soup = BeautifulSoup(html, "lxml")
         all_tables = soup.find_all('tr')
-        single_tables = soup.find_all('td')
+        # single_tables = soup.find_all('td')
         data = {}
 
-        temp_version  = ironsrc_version
         for coll in all_tables:
             for keys in coll.attrs.keys():
+                # breakpoint()
                 if keys.startswith('data-'):
                     #'6.16.1' is a placeholder for a dynamic ironsource sdk versions
                     # will pass ironSourceSDK version from integrationHelperPaser
@@ -53,12 +69,11 @@ class changelogparser:
                     # print(coll[keys])
                     rows = coll.find_all('td')
                     adapter_name = rows[0].text
-                    # print('adapter_name:', adapter_name)
+                    print('adapter_name:', adapter_name)
                     adapter_version = rows[1].text
-                    # print('adapter_version:', adapter_version)
+                    print('adapter_version:', adapter_version)
                     if coll[keys] not in data:
-                        # print("Coll is here: ")
-                        # print(coll)
+                        print("Column is here: ", coll)
                         data[ coll[keys] ] = []
                     # data[ coll[keys] ].append({
                     #     'Name': rows[0].text,
@@ -68,10 +83,10 @@ class changelogparser:
                     }
                     )
 
-        # pprint.pprint(data)
+        print("Printing Data: ")
+        pprint.pprint(data)
         return data
-        #
-        # pprint.pprint(data)
 
-    # x = "6.10.0"
-    # changeLog_dict = getChangeLogs(x)
+
+    x = "foo"
+    changeLog_dict = get_change_logs(x)

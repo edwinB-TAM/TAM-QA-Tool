@@ -15,7 +15,7 @@ ironSourceSDK_version = '6.15.0'
 user_logs = {'4.1.1': 'Mintegral',
  '4.1.8': 'AdColony',
  '4.1.7': 'UnityAds',
- '4.3.6': 'AdMob',
+ '4.3.9': 'AdMob',
  '4.3.7': 'AppLovin',
  '4.3.9': 'Facebook',
  '6.14.0': 'IronSource'}
@@ -35,10 +35,10 @@ data ={'6.14.0': [{'AdColony', '4.1.8'},
             {'Tapjoy', '4.1.9'},
             {'UnityAds', '4.1.8'},
             {'Vungle', '4.1.9'}],
- '6.15.0': [{'AdColony', '6.0.0'},
+ '6.15.0': [{'AdColony', '4.1.8'},
             {'4.3.9', 'AdMob'},
             {'4.3.2', 'Amazon'},
-            {'4.3.9', 'AppLovin'}, 
+            {'4.3.9', 'AppLovin'},
             {'4.1.7', 'Chartboost'},
             {'Facebook', '4.3.12'},
             {'Fyber', '4.3.2', '4.3.3'},
@@ -58,19 +58,20 @@ def check_test_ok(testname, value, case_items):
             found = True
     if found:
         print(testname, ": Okay")
-        return
-    print(testname, ": Invalid")
+    else:
+        print(item, ": Invalid")
 
 def check_items(case_items, test_case):
     for testname, value in test_case.items():
+        print('='*10)
+        print(testname)
+        print(value)
         check_test_ok(testname, value, case_items)
 
-
-
-
 for key, case_items in data.items():
-    print('Checking items for ', key)
+    print('Checking items for ', key    )
     print('=' * 25)
+    # print(case_items)
     check_items(case_items, user_logs)
     print('\n')
 
