@@ -84,7 +84,7 @@ Actual Results:
 - [x] Beta version done; Fix bugs
 
 #### Milestone #5
-- [] Deliver command line tool
+- [ ] Deliver command line tool
 
 ## Built With
 
