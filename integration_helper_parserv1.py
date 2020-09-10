@@ -1,33 +1,52 @@
-#Integration Helper Parser
+#Integration Helper Parser v2
 #Edwin Betancourt & ryan :)
-from array import *
-from pandas.io.html import read_html
-from pathlib import Path
 from change_log_parser import *
-# from sub_process import *
-from bs4 import BeautifulSoup
-from selenium import webdriver
 import requests
-import subprocess
 import urllib
 import os, ssl
-import pandas as pd
+from pandas.io.html import read_html
 import pprint
 import re
+from array import *
 import subprocess
+#install these
+from bs4 import BeautifulSoup
+from selenium import webdriver
+import pandas as pd
+import psycopg2
+import yaml
+
 # Scraping the networks in the integration logs
 # TODO: create function for both behaviors
 # class integrationHelperParser:
 user_active_networks= {'ad_network':[],'adapter_version':[]}
-
 def get_integration_helper(filename,mediation_sdk_version):
     mediation_sdk_version = mediation_sdk_version
     filename = filename
+
+    path = 'c:/Users/admin/Documents/Python Scripts/redshift/ssd_redshift.yml'#.format(USER=os.environ['USER'])
+    config = yaml.safe_load(open(path))['ssd_redshift']
+    conn_string = "dbname={dbname} port={port} user={user} password={password} host={host}".format(
+        dbname=config['dbname'], port=config['port'], user=config['user'],
+        password=config['password'], host=config['host'])
+    conn = psycopg2.connect(conn_string)
+    cursor = conn.cursor()
+    compatibility_query = """
+    select
+        *
+    from mobile_bi.tams_sdk_compatibility
+    where mediation_sdk_version = '{mediation_sdk_version}'
+    """
+    cursor.execute(compatibility_query.format(mediation_sdk_version='6.14.0'))
+    rows = cursor.fetchall()
+    headers = [desc[0] for desc in cursor.description]
+    df = pd.DataFrame(rows, columns=headers)
+    cursor.close()
     file = open(filename,"r")
     #Using regular expressions to detect patterns
     network_info = {'network':'version' }
     network = re.compile("\B([-]{15})\s([a-zA-Z]\w*)")
-    adapter = re.compile("(I IntegrationHelper: Adapter) ([0-9.]+\S)( - VERIFIED)")
+    adapter = re.compile("(I/IntegrationHelper: Adapter) ([0-9.]+\S)( - VERIFIED)")
     changelog_adapter = re.compile("([a-zA-Z])\d")
     changelog_adapter_version = re.compile("([\d.])")
     #creating a network dictionary
@@ -42,7 +61,6 @@ def get_integration_helper(filename,mediation_sdk_version):
                 if (network_name == "IronSource"):
                     ironSourceSDK = network_name
                     ironSourceSDK_version = adapter_version
-                    print("IntegrationHelper_temp: ", ironSourceSDK_version)
     # Value Checks
     # print("The ironSourceSDK version: ")
     # print (ironSourceSDK_version)
@@ -52,17 +70,11 @@ def get_integration_helper(filename,mediation_sdk_version):
     # print (user_active_networks)
     # print("ChangeLog networks: ")
     # pprint.pprint(change_log_networks)
-    data_df = pd.DataFrame(data)
+    data_df = df
     app_networks = pd.DataFrame(user_active_networks)
     output = app_networks.merge(data_df[data_df.mediation_sdk_version == mediation_sdk_version], how = 'left') ###define variable for mediation_sdk_version
     output['result'] = ['compatible' if type(x) == str else 'incompatible' for x in output.mediation_sdk_version]
     return output
-
-data = changelogparser().get_change_logs()
-# temp_user_logs = get_user_logs()
-# print(temp_user_logs)
-result = get_integration_helper("recentTest.txt" , "6.18.0")
-print(result)
 
 #def main():
 #    change_logs = changelogparser.get_change_logs('6.14.0')

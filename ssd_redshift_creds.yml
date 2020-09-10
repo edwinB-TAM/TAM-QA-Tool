@@ -1,0 +1,6 @@
+ssd_redshift:
+    dbname: castbi
+    port: 5439
+    user: ryan_cohen
+    password:
+    host: is-mobile-ssd.infra-team.com
