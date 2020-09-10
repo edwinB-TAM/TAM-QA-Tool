@@ -12,9 +12,17 @@ To help the TAM team automate components of the QA process by utilizing the data
 
 `pip install beautifulsoup`
 
+Install:
+`Chrome:https://sites.google.com/a/chromium.org/chromedriver/downloads`
+`Download Chrome Driver (move to usr/local/bin)`
+
 ## Getting Started
 
 This tool will eventually be ran via a terminal command, will insert instructions when ready :)
+
+1. Run `python3 python3 integration_helper_parser.py' 
+2. Connect test device with zero logger rewrite
+3. Will get results, similar to the following:
 
 #### Milestone #1
 
@@ -69,11 +77,14 @@ Actual Results:
 #### Milestone #3
 
 - [x] Retrieve values from both ***Milestones 1+2*** and compare values
-- [ ] Output results(_email|.txt_)
+- [x] Output results(_email|.txt_)
 - [ ] [*Feature*]Create script; user will only need to input integrationHelperLogs .txt file
 
 #### Milestone #4 7/24
-- [ ] Beta version done; Fix bugs
+- [x] Beta version done; Fix bugs
+
+#### Milestone #5
+- [ ] Deliver command line tool
 
 ## Built With
 
