@@ -17,5 +17,9 @@ def get_user_logs():
             errs = proc.communicate(timeout = 20)
         except subprocess.TimeoutExpired:
             proc.kill()
+<<<<<<< HEAD
             errs = proc.communicate()
+=======
+            outs, errs = proc.communicate()
+>>>>>>> terminate_process
             return filename

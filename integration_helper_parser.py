@@ -51,7 +51,11 @@ def get_integration_helper(filename):
     # pprint.pprint(change_log_networks)
     data_df = pd.DataFrame(data)
     app_networks = pd.DataFrame(user_active_networks)
+<<<<<<< HEAD
     output = app_networks.merge(data_df[data_df.mediation_sdk_version == ironSourceSDK_version], how = 'left')
+=======
+    output = app_networks.merge(data_df[data_df.mediation_sdk_version == mediation_sdk_version], how = 'left')
+>>>>>>> terminate_process
     output['result'] = ['compatible'
     if type(x) == str
     else 'incompatible' for x in output.mediation_sdk_version]
@@ -59,8 +63,13 @@ def get_integration_helper(filename):
     return output
 
 data = changelogparser().get_change_logs()
+<<<<<<< HEAD
 temp_user_logs = get_user_logs()
 result = get_integration_helper(temp_user_logs)
+=======
+# temp_user_logs = get_user_logs()
+result = get_integration_helper('HomeCraft_test1.txt')
+>>>>>>> terminate_process
 
 
 print(result)
