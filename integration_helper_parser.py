@@ -1,26 +1,24 @@
 #Integration Helper Parser
 #Edwin Betancourt & ryan :)
-from array import *
-from pandas.io.html import read_html
-from pathlib import Path
+from get_user_logs import *
 from change_log_parser import *
-# from sub_process import *
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import requests
-import subprocess
 import urllib
 import os, ssl
 import pandas as pd
+from pandas.io.html import read_html
 import pprint
 import re
-import subprocess
+from array import *
 # Scraping the networks in the integration logs
 # TODO: create function for both behaviors
 # class integrationHelperParser:
 user_active_networks= {'ad_network':[],'adapter_version':[]}
 
 def get_integration_helper(filename,mediation_sdk_version):
+# def get_integration_helper(filename):
     mediation_sdk_version = mediation_sdk_version
     filename = filename
     file = open(filename,"r")
@@ -42,7 +40,6 @@ def get_integration_helper(filename,mediation_sdk_version):
                 if (network_name == "IronSource"):
                     ironSourceSDK = network_name
                     ironSourceSDK_version = adapter_version
-                    print("IntegrationHelper_temp: ", ironSourceSDK_version)
     # Value Checks
     # print("The ironSourceSDK version: ")
     # print (ironSourceSDK_version)
@@ -54,16 +51,19 @@ def get_integration_helper(filename,mediation_sdk_version):
     # pprint.pprint(change_log_networks)
     data_df = pd.DataFrame(data)
     app_networks = pd.DataFrame(user_active_networks)
-    output = app_networks.merge(data_df[data_df.mediation_sdk_version == mediation_sdk_version], how = 'left') ###define variable for mediation_sdk_version
-    output['result'] = ['compatible' if type(x) == str else 'incompatible' for x in output.mediation_sdk_version]
+    output = app_networks.merge(data_df[data_df.mediation_sdk_version == mediation_sdk_version], how = 'left')
+    output['result'] = ['compatible'
+    if type(x) == str
+    else 'incompatible' for x in output.mediation_sdk_version]
+    # print("App networks", app_networks)
     return output
 
 data = changelogparser().get_change_logs()
 # temp_user_logs = get_user_logs()
-# print(temp_user_logs)
-result = get_integration_helper("recentTest.txt" , "6.18.0")
-print(result)
+result = get_integration_helper('HomeCraft_test1.txt','6.18.0')
 
+
+print(result)
 #def main():
 #    change_logs = changelogparser.get_change_logs('6.14.0')
 #    result = get_integration_helper('test.txt')
