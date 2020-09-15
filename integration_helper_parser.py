@@ -17,9 +17,9 @@ from array import *
 # class integrationHelperParser:
 user_active_networks= {'ad_network':[],'adapter_version':[]}
 
-def get_integration_helper(filename,mediation_sdk_version):
-# def get_integration_helper(filename):
-    mediation_sdk_version = mediation_sdk_version
+# def get_integration_helper(filename,mediation_sdk_version):
+def get_integration_helper(filename):
+    # mediation_sdk_version = mediation_sdk_version
     filename = filename
     file = open(filename,"r")
     #Using regular expressions to detect patterns
@@ -60,7 +60,7 @@ def get_integration_helper(filename,mediation_sdk_version):
 
 data = changelogparser().get_change_logs()
 # temp_user_logs = get_user_logs()
-result = get_integration_helper('HomeCraft_test1.txt','6.18.0')
+result = get_integration_helper('HomeCraft_test1.txt')
 
 
 print(result)
