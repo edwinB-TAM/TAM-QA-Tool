@@ -13,10 +13,13 @@ import pandas as pd
 class changelogparser:
     def __init__(self):
         pass
-    def get_change_logs(self):
+    def get_change_logs(self, user_os):
         #Will open browser to retrive HTML
         driver = webdriver.Chrome()
-        driver.get('https://developers.ironsrc.com/ironsource-mobile/android/mediation-networks-android')
+        if user_os == 'a':
+            driver.get('https://developers.ironsrc.com/ironsource-mobile/android/mediation-networks-android')
+        else:
+            driver.get('https://developers.ironsrc.com/ironsource-mobile/ios/mediation-networks-ios/')
         try:
             el = WebDriverWait(driver, 10).until(lambda d: d.find_element_by_tag_name("td"))
         finally:
@@ -41,7 +44,7 @@ class changelogparser:
                         data['mediation_sdk_version'].append(coll[keys])
                         data['ad_network'].append(adapter_name)
                         data['adapter_version'].append(i)
-        data['os'] = ['Android' for x in data['mediation_sdk_version']]
+        data['os'] = ['TBD' for x in data['mediation_sdk_version']]
         pd.DataFrame(data)
         # print("Printing Data: ")
         # pprint.pprint(data)

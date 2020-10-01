@@ -17,19 +17,23 @@ from array import *
 # class integrationHelperParser:
 user_active_networks= {'ad_network':[],'adapter_version':[]}
 
-# def get_integration_helper(filename,mediation_sdk_version):
-def get_integration_helper(filename):
+def get_integration_helper(filename, user_os):
+# def get_integration_helper(filename):
     # mediation_sdk_version = mediation_sdk_version
     filename = filename
-    file = open(filename,"r")
+    filename = open(filename,"r")
     #Using regular expressions to detect patterns
     network_info = {'network':'version' }
+    # User Network info
     network = re.compile("\B([-]{15})\s([a-zA-Z]\w*)")
-    adapter = re.compile("(I IntegrationHelper: Adapter) ([0-9.]+\S)( - VERIFIED)")
-    changelog_adapter = re.compile("([a-zA-Z])\d")
-    changelog_adapter_version = re.compile("([\d.])")
+    if user_os == 'a':
+        # Android integration helper regex
+        adapter = re.compile("(I IntegrationHelper: Adapter) ([0-9.]+\S)( - VERIFIED)")
+    if user_os == 'i':
+        # iOS integration helper regex
+        adapter = re.compile("(Adapter - Version )([0-9.]+\S)( - VERIFIED)")
     #creating a network dictionary
-    for i, line in enumerate(file):
+    for i, line in enumerate(filename):
         # parsing though the logs creating an instance of the network name
             for match in re.finditer(network,line):
                 network_name = match.group(2)
@@ -40,39 +44,30 @@ def get_integration_helper(filename):
                 if (network_name == "IronSource"):
                     ironSourceSDK = network_name
                     ironSourceSDK_version = adapter_version
-    # Value Checks
-    # print("The ironSourceSDK version: ")
-    # print (ironSourceSDK_version)
-    # print("Network Name: ")
-    # print (ironSourceSDK)
-    # print("User Active NetWorks: ")
-    # print (user_active_networks)
-    # print("ChangeLog networks: ")
-    # pprint.pprint(change_log_networks)
     data_df = pd.DataFrame(data)
     app_networks = pd.DataFrame(user_active_networks)
-<<<<<<< HEAD
-    output = app_networks.merge(data_df[data_df.mediation_sdk_version == ironSourceSDK_version], how = 'left')
-=======
-    output = app_networks.merge(data_df[data_df.mediation_sdk_version == mediation_sdk_version], how = 'left')
->>>>>>> terminate_process
-    output['result'] = ['compatible'
-    if type(x) == str
-    else 'incompatible' for x in output.mediation_sdk_version]
+    output = app_networks.merge(data_df[data_df.mediation_sdk_version == ironSourceSDK_version], how = 'left') ###define variable for mediation_sdk_version
+    output['result'] = ['compatible' if type(x) == str else 'incompatible' for x in output.mediation_sdk_version]
     # print("App networks", app_networks)
     return output
 
-data = changelogparser().get_change_logs()
-<<<<<<< HEAD
-temp_user_logs = get_user_logs()
-result = get_integration_helper(temp_user_logs)
-=======
+
+
+user_os = input("Select (a)Android | (i)iOS: ")
+data = changelogparser().get_change_logs(user_os)
+if user_os == 'a':
+    temp_user_logs = get_user_android_logs(user_os)
+elif user_os == 'i':
+    temp_user_logs = get_user_ios_logs()
+else:
+    print("Invalid platform selection, try again!")
+    get_user_logs()
 # temp_user_logs = get_user_logs()
-result = get_integration_helper('HomeCraft_test1.txt')
->>>>>>> terminate_process
-
-
+result = get_integration_helper(temp_user_logs, user_os)
+# result = get_integration_helper('ios.txt')
 print(result)
+
+
 #def main():
 #    change_logs = changelogparser.get_change_logs('6.14.0')
 #    result = get_integration_helper('test.txt')
