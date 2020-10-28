@@ -44,7 +44,7 @@ class changelogparser:
                         data['mediation_sdk_version'].append(coll[keys])
                         data['ad_network'].append(adapter_name)
                         data['adapter_version'].append(i)
-        data['os'] = ['TBD' for x in data['mediation_sdk_version']]
+        # data['os'] = ['TBD' for x in data['mediation_sdk_version']]
         pd.DataFrame(data)
         # print("Printing Data: ")
         # pprint.pprint(data)

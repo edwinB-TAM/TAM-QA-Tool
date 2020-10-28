@@ -4,11 +4,10 @@ import os.path
 import time
 
 def get_user_android_logs():
-    # filename = input("Enter File Name: ")
-    filename = "boxOfficeTycoon"
+    filename = input("Enter File Name: ")
+    # filename = "boxOfficeTycoon"
     filename = filename + (".txt")
     with open(filename, 'w') as f:
-        #
         # proc = subprocess.Popen(['adb','logcat','-s', 'IntegrationHelper'],
         proc = subprocess.Popen(['adb','logcat','-s', 'IntegrationHelper'],
         stdout=f,stderr=subprocess.STDOUT)
@@ -24,12 +23,13 @@ def get_user_android_logs():
             return filename
 
 def get_user_ios_logs():
-    filename = "ios"
+    filename = input("Enter File Name: ")
+    # filename = "test.txt"
     filename = filename + (".txt")
     with open(filename, 'w') as f:
-        proc = subprocess.Popen(["cfgutil syslog | grep -r IntegrationHelper"], stdin = subprocess.PIPE, shell = True,
-               stdout=f,
-               stderr=subprocess.STDOUT)
+            proc = subprocess.Popen(["cfgutil syslog | grep -r IntegrationHelper"], stdin = subprocess.PIPE, shell = True,
+                   stdout=f,
+                   stderr=subprocess.STDOUT)
         print("Connect device...")
         time.sleep(2)
         print("Waiting for logs...")
@@ -40,3 +40,9 @@ def get_user_ios_logs():
             proc.kill()
             errs = proc.communicate()
             return filename
+
+def set_platform(user_os):
+    if user_os == 'i':
+        return 'iOS'
+    elif user_os == 'a':
+        return 'Android'

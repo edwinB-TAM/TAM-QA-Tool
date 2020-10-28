@@ -56,32 +56,12 @@ def get_integration_helper(filename, user_os):
 user_os = input("Select (a)Android | (i)iOS: ")
 data = changelogparser().get_change_logs(user_os)
 if user_os == 'a':
-    temp_user_logs = get_user_android_logs(user_os)
+    temp_user_logs = get_user_android_logs()
 elif user_os == 'i':
     temp_user_logs = get_user_ios_logs()
 else:
     print("Invalid platform selection, try again!")
-    get_user_logs()
 # temp_user_logs = get_user_logs()
 result = get_integration_helper(temp_user_logs, user_os)
 # result = get_integration_helper('ios.txt')
 print(result)
-
-
-#def main():
-#    change_logs = changelogparser.get_change_logs('6.14.0')
-#    result = get_integration_helper('test.txt')
-#    textfile = 'test.txt'
-#    get_integration_helper(textfile)
-#    print('=' * 25)
-#    change_logs = changelogparser.get_change_logs('6.14.0')
-    # breakpoint()
-#    for key, change_log_networks in change_logs.items():
-#        print('Checking SDK version: ', key)
-#        print('-' * 20)
-        # print(change_log_networks)
-        # breakpoint()
-#        compare_items(change_logs, user_active_networks)
-#        print('\n')
-#main()
-     #data = changelogparser.getChangeLogs('6.14.0')
