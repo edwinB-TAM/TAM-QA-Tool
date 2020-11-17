@@ -13,7 +13,7 @@ To help the TAM team automate components of the QA process by utilizing the data
 `pip install beautifulsoup`
 
 Install:
-`Chrome:https://sites.google.com/a/chromium.org/chromedriver/downloads`
+`Chrome: [https://sites.google.com/a/chromium.org/chromedriver/downloads] `
 `Download Chrome Driver (move to usr/local/bin)`
 
 ## Getting Started
