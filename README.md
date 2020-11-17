@@ -1,4 +1,4 @@
-# TAM-QA-Tool
+# TAM-Adapter-Compatibility-Tool
 
 ## Objective
 
